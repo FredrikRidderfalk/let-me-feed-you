@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/* We can add global styles to this file, and also import other style files */
+@use "./app/abstracts" as *
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+body
+    background-color: $primary-white
+h1
+    font-size: rem(32)
+h2
+    font-size: rem(24)
+h3
+    font-size: rem(20)
+p
+    font-size: rem(16)
+
+.grid-container
+    padding: rem(10)
+    max-width: 1540px
