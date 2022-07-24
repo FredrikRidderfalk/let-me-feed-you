@@ -2,12 +2,18 @@
 <app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
 
 <main>
-  <h1 class="title">Let Me Feed You</h1>
-  <p class="subtitle">Scrumptious Plant-Based Food</p>
-  <p>
-    Window width: <strong>{{ getScreenWidth }}</strong> Is mobile?
-    <strong>{{ isMobile }}</strong>
-  </p>
+  <section class="hero-section">
+    <div class="container__hero-text">
+      <h1 class="title">Let Me Feed You</h1>
+      <p class="subtitle">Scrumptious Food for the Plant-Based Foodie</p>
+    </div>
+    <!-- <img src="/assets/hero.png" alt="A Japanese kitchen." class="hero-img" /> -->
+    <img
+      src="/assets/hero-mobile.png"
+      alt="A Japanese kitchen."
+      class="hero-img"
+    />
+  </section>
 </main>
 
 <app-footer id="footer"></app-footer>
