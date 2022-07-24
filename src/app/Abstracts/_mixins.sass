@@ -1,15 +1,18 @@
 // Flexbox
-@mixin flex-container
+@mixin flex-center
     display: flex
     justify-content: center
     align-items: center
+@mixin flex-space-between
+    display: flex
+    justify-content: space-between
 
 // Media Queries
-@mixin tablet
-    @media screen and (max-width: 768)
+// @mixin tablet
+//     max-width: rem(768)
 
-@mixin desktop
-    @media screen and (max-width: 1366)
+// @mixin desktop
+//     max-width: rem(1366)
 
 // Shadows
 @mixin box-shadow

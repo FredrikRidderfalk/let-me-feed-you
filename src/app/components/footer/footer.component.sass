@@ -1,0 +1,25 @@
+@use "../../abstracts" as *
+p
+    font-size: rem(14)
+footer
+    text-align: center
+    background-color: magenta
+    padding: rem(10)
+.title
+.socials
+.footer-links
+.copyright
+
+@media screen and (min-width: 768px)
+    footer
+        @include flex-space-between
+        background-color: #feebe4
+        padding: rem(10)
+
+@media screen and (min-width: 1366px)
+    .footer__left
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+    .footer__left, .footer__right
+        padding-inline: rem(20)

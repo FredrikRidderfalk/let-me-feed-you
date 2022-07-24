@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,6 +10,23 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
+  isMobile: boolean = false
+  getScreenWidth!: number;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.getScreenWidth = event.target.innerWidth;
+    this.checkScreenWidth()
+  }
+  
+  checkScreenWidth() {
+    if(this.getScreenWidth > 768) {
+      this.isMobile = false
+    }
+    if(this.getScreenWidth < 768) {
+      this.isMobile = true
+    }
+  }
 
   constructor() { }
 
@@ -28,6 +45,9 @@ export class HomeComponent implements OnInit {
       delay: 2,
       ease: "expo.out",
     });
+
+    this.getScreenWidth = window.innerWidth;
+    this.checkScreenWidth()
   }
 
 }

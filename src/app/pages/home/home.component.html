@@ -1,8 +1,12 @@
-<app-navbar id="navbar" class="component"></app-navbar>
+<app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
 
 <main>
   <h1 class="title">Let Me Feed You</h1>
-  <p class="subtitle">home works!</p>
+  <p class="subtitle">Scrumptious Plant-Based Food</p>
+  <p>
+    Window width: <strong>{{ getScreenWidth }}</strong> Is mobile?
+    <strong>{{ isMobile }}</strong>
+  </p>
 </main>
 
-<app-footer id="footer" class="component"></app-footer>
+<app-footer id="footer"></app-footer>

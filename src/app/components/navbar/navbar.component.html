@@ -1,21 +1,25 @@
-<p>navbar works!</p>
+<nav class="container__navigation">
+  <div class="container__logo">
+    <a routerLink="/">
+      <img class="logo" src="/assets/favicon.png" alt="Let Me Feed You Logo" />
+    </a>
+  </div>
 
-<!-- <div class="container__navigation">
-    <div class="container__searchbar">
-      <input
-        class="searchbar"
-        type="text"
-        placeholder="{{ searchPlaceholder }}"
-      />
-      <span class="material-symbols-outlined">search</span>
-    </div>
-    <div class="container__nav-buttons">
-      <div class="container__notification">
-        <span class="material-symbols-outlined">notifications</span>
-      </div>
-      <div class="container__settings">
-        <img class="avatar" src="/assets/avatar.png" alt="Avatar" />
-        <span class="material-symbols-outlined">expand_more</span>
-      </div>
-    </div>
-  </div> -->
+  <div class="container__nav-links">
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/recipes" class="link">{{ navLinks.recipes }}</a>
+      </li>
+      <li>
+        <a routerLink="/academy" class="link">{{ navLinks.academy }}</a>
+      </li>
+      <li>
+        <a routerLink="/stories" class="link">{{ navLinks.stories }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container__darkmode">
+    <span class="material-symbols-outlined">notifications</span>
+  </div>
+</nav>
