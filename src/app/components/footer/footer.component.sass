@@ -1,14 +1,20 @@
 @use "../../abstracts" as *
-p
-    font-size: rem(14)
+
 footer
     text-align: center
     background-color: #feebe4
-    padding: rem(10)
-.title
+    padding: rem(40) rem(10) rem(10)
 .socials
-.footer-links
+    margin-block: rem(20)
+.social
+    width: 40px
+    margin: rem(8)
+.page-links
+    font-size: rem(16)
 .copyright
+    margin-top: rem(20)
+    p
+        font-size: rem(12)
 
 @media screen and (min-width: 768px)
     footer
@@ -17,8 +23,7 @@ footer
 
 @media screen and (min-width: 1366px)
     .footer__left
-        display: flex
-        justify-content: space-between
+        @include flex-space-between
         flex-direction: column
     .footer__left, .footer__right
         padding-inline: rem(20)
