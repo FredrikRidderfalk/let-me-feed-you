@@ -7,9 +7,15 @@
       <h1 class="title">Let Me Feed You</h1>
       <p class="subtitle">Scrumptious Food for the Plant-Based Foodie</p>
     </div>
-    <!-- <img src="/assets/hero.png" alt="A Japanese kitchen." class="hero-img" /> -->
     <img
+      *ngIf="isMobile"
       src="/assets/hero-mobile.png"
+      alt="A Japanese kitchen."
+      class="hero-img"
+    />
+    <img
+      *ngIf="!isMobile"
+      src="/assets/hero.jpg"
       alt="A Japanese kitchen."
       class="hero-img"
     />
