@@ -11,6 +11,7 @@ import { AcademyComponent } from './pages/academy/academy.component';
 import { StoriesComponent } from './pages/stories/stories.component';
 import { RecipeComponent } from './components/recipe/recipe.component';
 import { GuideComponent } from './components/guide/guide.component';
+import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GuideComponent } from './components/guide/guide.component';
     AcademyComponent,
     StoriesComponent,
     RecipeComponent,
-    GuideComponent
+    GuideComponent,
+    MobileNavbarComponent
   ],
   imports: [
     BrowserModule,
