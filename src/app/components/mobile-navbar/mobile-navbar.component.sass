@@ -1,8 +1,137 @@
 @use "../../abstracts" as *
 
-.container__navigation
-    text-align: center
-    background-color: $primary-beige
-.logo
-    width: 40px
-    border-radius: 8px
+// .container__navigation
+//     text-align: center
+//     background-color: $lmfy-beige
+// .logo
+//     width: 40px
+//     border-radius: 8px
+
+// Animated navbar
+$items: 3
+$transition-duration: 0.5s
+$transition-delay: 0.05s
+
+.container
+    position: relative
+    width: 100%
+    background-color: $lmfy-beige
+    overflow: hidden
+
+#toggle
+    position: absolute
+    left: -100%
+    top: -100%
+    & ~ .toggle-container .button-toggle
+        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1)
+#toggle:focus
+    & ~ .toggle-container .button-toggle
+        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1)
+
+// Styles for the 'open' state, if the checkbox is checked
+#toggle:checked
+    & ~ .toggle-container .button-toggle
+        box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1)
+        // &:hover
+        //     box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1)
+        &:before
+            transform: translateY(-50%) rotate(45deg) scale(1)
+        &:after
+            transform: translateY(-50%) rotate(-45deg) scale(1)
+    &:focus ~ .toggle-container .button-toggle
+        box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1)
+    & ~ .nav
+        margin-bottom: rem(100)
+        pointer-events: auto
+        transform: translate(50px, 50px)
+        .nav-item
+            color: $lmfy-black
+            letter-spacing: 0
+            height: 40px
+            line-height: 40px
+            margin-top: 0
+            opacity: 1
+            transform: scaleY(1)
+            transition: $transition-duration, opacity 0.1s
+            @for $i from 1 through $items
+                &:nth-child(#{$i})
+                    $delay: ($items - $i) * $transition-delay
+                    transition-delay: $delay
+                &:before
+                    $delay: ($items - $i) * $transition-delay
+                    transition-delay: $delay
+            &:before
+                opacity: 0
+
+// Toggle button
+.button-toggle
+    position: absolute
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin: 25px
+    background-color: transparent
+    border: none
+    cursor: pointer
+    border-radius: 100%
+    transition: $transition-duration + 0.1
+    &:before, &:after
+        position: absolute
+        content: ''
+        top: 50%
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: $lmfy-black
+        border-radius: 5px
+        transition: $transition-duration
+    &:before
+        transform: translateY(-50%) rotate(45deg) scale(0)
+    &:after
+        transform: translateY(-50%) rotate(-45deg) scale(0)
+
+// Menu
+.nav
+    display: inline-block
+    margin: 25px 25px 20px
+    pointer-events: none
+    transition: $transition-duration
+.nav-item
+    position: relative
+    display: inline-block
+    float: left
+    clear: both
+    color: transparent
+    font-size: 14px
+    letter-spacing: -6.2px
+    height: 7px
+    line-height: 7px
+    text-transform: uppercase
+    white-space: nowrap
+    transform: scaleY(0.2)
+    transition: $transition-duration, opacity 1s
+    @for $i from 1 through $items
+        &:nth-child(#{$i})
+            $delay: ($i - 1) * $transition-delay
+            transition-delay: $delay
+        &:before
+            $delay: ($i - 1) * $transition-delay
+            transition-delay: $delay
+    &:nth-child(1)
+        letter-spacing: -8px
+    &:nth-child(2)
+        letter-spacing: -7px
+    &:nth-child(n + 4)
+        letter-spacing: -8px
+        margin-top: -7px
+        opacity: 0
+    &:before
+        position: absolute
+        content: ''
+        top: 50%
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: $lmfy-black
+        transform: translateY(-50%) scaleY(5)
+        transition: $transition-duration
