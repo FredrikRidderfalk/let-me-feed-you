@@ -4,9 +4,17 @@
     @include flex-space-between
     align-items: center
     background-color: $lmfy-beige
+    padding-block: rem(20)
 .nav-links
     display: flex
-.link, .container__logo, .container__darkmode
+.link
+    font-size: rem(20)
+    text-decoration: underline wavy
+    text-decoration-thickness: rem(1.5)
+    text-underline-offset: rem(6)
+.link, .container__logo, .container__notifications
     padding-inline: rem(50)
 .logo
-    width: 40px
+    width: 60px
+.material-symbols-outlined
+    font-size: rem(35)
