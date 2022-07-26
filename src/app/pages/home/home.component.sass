@@ -25,7 +25,6 @@
 .hero-img
     display: block
     width: 100%
-    border: 2px solid yellow
 
 @media screen and (min-width: 550px)
     .container__hero-text
@@ -38,26 +37,23 @@
         width: 700px
     .title
         font-size: rem(80)
-        line-height: 1.25
-        margin-top: rem(20)
-    .subtitle
-        font-size: rem(20)
-        margin-top: rem(20)
+        margin-top: rem(30)
 
 @media screen and (min-width: 1366px)
     .title
-        font-size: rem(80)
-        line-height: 1.25
-        margin-top: rem(20)
+        font-size: rem(90)
+        margin-top: rem(100)
     .subtitle
-        font-size: rem(20)
-        margin-top: rem(20)
+        font-size: rem(24)
+        margin-top: rem(30)
+        width: 420px
 
 // Recipes section
 .recipes-section
     background-color: #fbcdd5
-    .container__elite-recipe
-        margin-top: rem(40)
+.container__elite-recipe
+    max-width: 550px
+    margin: rem(40) auto 0
 .recipe-img
     display: block
     width: 100%
@@ -66,26 +62,47 @@
     text-decoration: underline wavy
     text-underline-offset: rem(3)
 .recipes-subtitle
-    font-size: rem(18)
+    font-size: rem(20)
     margin-top: rem(10)
+
+@media screen and (min-width: 550px)
+    .recipes-title
+        font-size: rem(50)
+    .recipe-description
+        h3
+            font-size: rem(30)
+        p
+            font-size: rem(18)
 
 @media screen and (min-width: 768px)
     .container__elite-recipe
-        display: flex
-
-@media screen and (min-width: 1366px)
+        @include flex-center
+        max-width: 1100px
+        text-align: right
+        flex-direction: row-reverse
+        .recipe-description
+            margin-right: rem(10)
+        &:nth-child(even)
+            flex-direction: row
+            text-align: left
+            .recipe-description
+                margin-left: rem(10)
 
 // Explore section
 .explore-section
     background-color: #fbcdd5
-    .explore__link
-        color: $lmfy-darkblue
-        font-weight: 500
-        text-decoration: underline wavy
-        text-underline-offset: rem(3)
+    padding-bottom: rem(100)
     p
         font-size: rem(18)
         margin-top: rem(10)
+    p, h2
+        max-width: 550px
+        margin-inline: auto
+.explore__link
+    color: $lmfy-darkblue
+    font-weight: 500
+    text-decoration: underline wavy
+    text-underline-offset: rem(3)
 
 @media screen and (min-width: 768px)
 
