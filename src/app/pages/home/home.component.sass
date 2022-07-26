@@ -12,19 +12,46 @@
 // Hero section
 .hero-section
     position: relative
+.container__hero-text
+    position: absolute
+    width: 330px
+.title
+    font-size: rem(60)
+    line-height: 1.25
+    margin-top: rem(20)
+.subtitle
+    font-size: rem(20)
+    margin-top: rem(20)
+.hero-img
+    display: block
+    width: 100%
+    border: 2px solid yellow
+
+@media screen and (min-width: 550px)
     .container__hero-text
-        position: absolute
-        width: 330px
-        .title
-            font-size: rem(60)
-            line-height: 1.25
-            margin-top: rem(20)
-        .subtitle
-            font-size: rem(16)
-            margin-top: rem(20)
-    .hero-img
-        display: block
-        width: 100%
+        width: 520px
+    .subtitle
+        width: 350px
+
+@media screen and (min-width: 768px)
+    .container__hero-text
+        width: 700px
+    .title
+        font-size: rem(80)
+        line-height: 1.25
+        margin-top: rem(20)
+    .subtitle
+        font-size: rem(20)
+        margin-top: rem(20)
+
+@media screen and (min-width: 1366px)
+    .title
+        font-size: rem(80)
+        line-height: 1.25
+        margin-top: rem(20)
+    .subtitle
+        font-size: rem(20)
+        margin-top: rem(20)
 
 // Recipes section
 .recipes-section
@@ -34,6 +61,13 @@
 .recipe-img
     display: block
     width: 100%
+.more-recipes
+    margin-top: rem(20)
+    text-decoration: underline wavy
+    text-underline-offset: rem(3)
+.recipes-subtitle
+    font-size: rem(18)
+    margin-top: rem(10)
 
 @media screen and (min-width: 768px)
     .container__elite-recipe

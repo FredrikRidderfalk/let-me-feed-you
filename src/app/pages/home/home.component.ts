@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
   
   checkScreenWidth() {
-    if(this.getScreenWidth > 768) {
+    if(this.getScreenWidth >= 768) {
       this.isMobile = false
     }
     if(this.getScreenWidth < 768) {
