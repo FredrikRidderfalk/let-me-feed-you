@@ -4,8 +4,9 @@ footer
     text-align: center
     background-color: $lmfy-beige
     padding: rem(40) rem(10) rem(10)
-.socials
-    margin-block: rem(20)
+.container__footer-content
+    max-width: 1400px
+    height: 150px
 .social
     width: 40px
     margin: rem(8)
@@ -21,13 +22,10 @@ footer
     text-decoration-thickness: rem(1.25)
 
 @media screen and (min-width: 768px)
-    footer
+    .container__footer-content
         @include flex-space-between
         padding: rem(10)
-
-@media screen and (min-width: 1366px)
-    .footer__left
+        margin: 0 auto
+    .footer__right, .footer__left
         @include flex-space-between
         flex-direction: column
-    .footer__left, .footer__right
-        padding-inline: rem(20)
