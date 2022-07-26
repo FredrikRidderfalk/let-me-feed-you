@@ -1,4 +1,5 @@
-<app-navbar id="navbar"></app-navbar>
+<app-mobile-navbar *ngIf="isMobile" id="navbar"></app-mobile-navbar>
+<app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
 
 <main>
   <h1 class="title">Plant-Based News</h1>
