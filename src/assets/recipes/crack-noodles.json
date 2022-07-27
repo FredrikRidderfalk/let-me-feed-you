@@ -1,18 +1,16 @@
 {
     "name": "Crack Noodles.",
     "description": "These garlic noodles are so incredibly quick, easy, and tasty, combining a few Western and Asian ingredients to make one very flavorful bowl of deliciousness.",
-    "tags": [
-        {
+    "tags": {
             "quick": true,
             "easy": true,
             "temperature": {
                 "value": "",
                 "unit": ""
             },
-            "dishes": true,
+            "lesswash": true,
             "cheap": true
-        }
-    ],
+        },
     "ingredients": [
         {
             "name": "Noodles",

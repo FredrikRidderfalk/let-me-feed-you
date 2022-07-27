@@ -1,9 +1,11 @@
-export interface Guide {
-    title: string;
+import { FlexItem, Ingredient, Tags } from "./models";
+
+export interface Recipe {
+    name: string;
     description: string;
-    cheapTag: boolean;
-    easyTag: boolean;
-    quickTag: boolean;
-    lessWashTag: boolean;
-    temperatureTag: boolean;
+    tags: Tags;
+    ingredients: Ingredient[];
+    flex: FlexItem[];
+    instructions: string[];
+    notes: string;
 }

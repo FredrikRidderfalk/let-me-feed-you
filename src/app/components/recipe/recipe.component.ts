@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Recipe } from 'src/app/models/recipe';
 import CrackNoodles from "../../../assets/recipes/crack-noodles.json"
 
 @Component({
@@ -10,6 +11,7 @@ export class RecipeComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
   CrackNoodles = CrackNoodles
+  // CrackNoodles: Recipe[] = CrackNoodles
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
