@@ -1,0 +1,23 @@
+@use "../../../abstracts" as *
+
+.tag
+    @include flex-center
+    @include flex-column
+    background-color: $lmfy-lightorange
+    border: 2px solid $lmfy-darkorange
+    border-radius: 6px
+    width: 70px
+    height: 70px
+    margin: rem(7)
+.tag-icon
+    width: 40px
+    display: flex
+.tagline
+    margin-top: rem(5)
+
+@media screen and (min-width: 768px)
+    .tag
+        width: 100px
+        height: 100px
+    .tag-icon
+        width: 44px

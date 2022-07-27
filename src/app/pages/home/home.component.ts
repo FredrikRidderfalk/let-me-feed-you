@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export class HomeComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
+  temperature!: string
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {

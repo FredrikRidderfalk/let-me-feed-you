@@ -14,6 +14,9 @@ import { GuideComponent } from './components/guide/guide.component';
 import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.component';
 import { CheapComponent } from './components/tags/cheap/cheap.component';
 import { EasyComponent } from './components/tags/easy/easy.component';
+import { QuickComponent } from './components/tags/quick/quick.component';
+import { WashComponent } from './components/tags/wash/wash.component';
+import { TemperatureComponent } from './components/tags/temperature/temperature.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { EasyComponent } from './components/tags/easy/easy.component';
     GuideComponent,
     MobileNavbarComponent,
     CheapComponent,
-    EasyComponent
+    EasyComponent,
+    QuickComponent,
+    WashComponent,
+    TemperatureComponent
   ],
   imports: [
     BrowserModule,
