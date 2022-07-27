@@ -12,6 +12,8 @@ import { StoriesComponent } from './pages/stories/stories.component';
 import { RecipeComponent } from './components/recipe/recipe.component';
 import { GuideComponent } from './components/guide/guide.component';
 import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.component';
+import { CheapComponent } from './components/tags/cheap/cheap.component';
+import { EasyComponent } from './components/tags/easy/easy.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.
     StoriesComponent,
     RecipeComponent,
     GuideComponent,
-    MobileNavbarComponent
+    MobileNavbarComponent,
+    CheapComponent,
+    EasyComponent
   ],
   imports: [
     BrowserModule,

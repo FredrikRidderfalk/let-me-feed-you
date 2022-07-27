@@ -1,4 +1,4 @@
-<app-mobile-navbar *ngIf="isMobile" id="navbar"></app-mobile-navbar>
+<app-mobile-navbar *ngIf="isMobile" id="mobile-navbar"></app-mobile-navbar>
 <app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
 
 <main>
@@ -44,6 +44,10 @@
           combining a few Western and Asian ingredients to make one very
           flavorful bowl of deliciousness.
         </p>
+        <div class="container__tags">
+          <app-cheap></app-cheap>
+          <app-easy></app-easy>
+        </div>
       </div>
     </article>
 
