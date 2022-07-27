@@ -2,7 +2,13 @@
 <app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
 
 <main>
-  <h1 class="title">Plant-Based Recipes</h1>
+  <div class="container__recipes-intro">
+    <h1 class="title">Plant-Based Recipes</h1>
+    <p class="subtitle">My cabbages!</p>
+  </div>
+  <div class="recipes">
+    <a routerLink="/recipe" class="link">crack noodles.</a>
+  </div>
 </main>
 
 <app-footer id="footer"></app-footer>

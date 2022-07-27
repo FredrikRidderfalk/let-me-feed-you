@@ -1,0 +1,98 @@
+{
+    "name": "Crack Noodles.",
+    "description": "These garlic noodles are so incredibly quick, easy, and tasty, combining a few Western and Asian ingredients to make one very flavorful bowl of deliciousness.",
+    "tags": [
+        {
+            "quick": true,
+            "easy": true,
+            "temperature": {
+                "value": "",
+                "unit": ""
+            },
+            "dishes": true,
+            "cheap": true
+        }
+    ],
+    "ingredients": [
+        {
+            "name": "Noodles",
+            "amount": 200,
+            "unit": "g"
+        },
+        {
+            "name": "Pureed tomatoes",
+            "amount": 400,
+            "unit": "ml"
+        },
+        {
+            "name": "Butter",
+            "amount": 200,
+            "unit": "g"
+        },
+        {
+            "name": "Garlic",
+            "amount": 8,
+            "unit": "large cloves"
+        },
+        {
+            "name": "Light soy sauce",
+            "amount": 1,
+            "unit": "cup"
+        },
+        {
+            "name": "MSG",
+            "amount": 1,
+            "unit": "tbsp"
+        },
+        {
+            "name": "Sugar",
+            "amount": 1,
+            "unit": "cup"
+        },
+        {
+            "name": "Chili flakes",
+            "amount": 2,
+            "unit": "tbsp"
+        },
+        {
+            "name": "Rice vinegar",
+            "amount": 2,
+            "unit": "tbsp"
+        },
+        {
+            "name": "Spring onion",
+            "amount": 3,
+            "unit": ""
+        }
+    ],
+    "flex": [
+        {
+            "ingredient": "Noodles",
+            "substitutes": "Use any noodles you likey, thin or thick, round or flat. Yes, that includes Italian pasta too."
+        },
+        {
+            "ingredient": "Sugar",
+            "substitutes": "Use refined white sugar, brown sugar, palm sugar, or our favorite... Muscovado sugar!"
+        },
+        {
+            "ingredient": "MSG",
+            "substitutes": "Not necessary, but always a wonderful flavor enhancer."
+        },
+        {
+            "ingredient": "Chili flakes",
+            "substitutes": "Or why not fresh chopped up chili if you have it."
+        },
+        {
+            "ingredient": "Rice vinegar",
+            "substitutes": "Most vinegars are fairly identical substitutes, e.g. white wine vinegar, apple cider vinegar, etc."
+        }
+    ],
+    "instructions": [
+        "1. Bring a pot or pan of water to a boil, then salt the water to your liking and add the noodles.",
+        "2. Slice the cloves of garlic.",
+        "3. Add butter to a wok or pan on medium high heat and fry for 1 minute.",
+        "4. Add soy, sugar, chili flakes, chopped spring onion, MSG, and vinegar. Set the heat to low until the noodles are done.",
+        "5. Add noodles to the sauce, set the heat to high and mix for 1 minute. Serve."
+    ],
+    "notes": "MSG is amazing in this dish."
+}

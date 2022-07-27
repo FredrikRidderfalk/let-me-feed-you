@@ -1,1 +1,12 @@
-<p>recipe works!</p>
+<app-mobile-navbar *ngIf="isMobile" id="navbar"></app-mobile-navbar>
+<app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
+
+<main>
+  <div class="container__recipes-intro">
+    <h1 class="title">crack noodles.</h1>
+    <p class="subtitle">My cabbages need the crack noodles!</p>
+    <p>{{ CrackNoodles.description }}</p>
+  </div>
+</main>
+
+<app-footer id="footer"></app-footer>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import CrackNoodles from "../../../assets/recipes/crack-noodles.json"
 
 @Component({
   selector: 'app-recipe',
@@ -6,10 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe.component.sass']
 })
 export class RecipeComponent implements OnInit {
+  isMobile: boolean = false
+  getScreenWidth!: number;
+  CrackNoodles = CrackNoodles
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.getScreenWidth = event.target.innerWidth;
+    this.checkScreenWidth()
+  }
+  
+  checkScreenWidth() {
+    if(this.getScreenWidth > 768) {
+      this.isMobile = false
+    }
+    if(this.getScreenWidth < 768) {
+      this.isMobile = true
+    }
+  }
 
   constructor() { }
 
   ngOnInit(): void {
+    this.getScreenWidth = window.innerWidth;
+    this.checkScreenWidth()
+
+    console.log(CrackNoodles)
   }
 
 }
