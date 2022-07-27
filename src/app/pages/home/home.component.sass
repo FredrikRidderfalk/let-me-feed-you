@@ -66,11 +66,17 @@
     margin-top: rem(10)
 .container__tags
     @include flex-center
-    background-color: $lmfy-white
+    background-color: #ffffff90
+    background-image: url("/assets/paper.jpg")
+    background-size: cover
+    background-blend-mode: lighten
     padding: rem(10)
     border: 2px solid $lmfy-black
     border-radius: 6px
-
+    margin-top: rem(20)
+.recipe-description
+    p
+        margin-top: rem(10)
 @media screen and (min-width: 550px)
     .recipes-title
         font-size: rem(50)
