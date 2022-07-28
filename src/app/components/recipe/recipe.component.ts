@@ -12,6 +12,11 @@ export class RecipeComponent implements OnInit {
   getScreenWidth!: number;
   CrackNoodles: Recipe = CrackNoodles
 
+  getImageUrl() {
+    const imageName = CrackNoodles.name.toLowerCase().replace(/ /g, '')
+    return `/assets/photos/${imageName}.jpg`
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.getScreenWidth = event.target.innerWidth;
@@ -32,8 +37,6 @@ export class RecipeComponent implements OnInit {
   ngOnInit(): void {
     this.getScreenWidth = window.innerWidth;
     this.checkScreenWidth()
-
-    console.log(CrackNoodles)
   }
 
 }

@@ -5,14 +5,26 @@
   <div class="container__recipes-intro">
     <h1 class="title">{{ CrackNoodles.name }}</h1>
     <p class="subtitle">{{ CrackNoodles.description }}</p>
-    <ul class="ingredient-list">
-      <li
-        *ngFor="let ingredient of CrackNoodles.ingredients"
-        class="ingredient"
-      >
-        {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
-      </li>
-    </ul>
+
+    <div class="container__recipe-img">
+      <img
+        src="{{ getImageUrl() }}"
+        alt="{{ CrackNoodles.name }}."
+        class="recipe-img"
+      />
+    </div>
+
+    <div class="container__ingredients">
+      <h2 class="ingredients__title">Ingredients</h2>
+      <ul class="ingredient-list">
+        <li
+          *ngFor="let ingredient of CrackNoodles.ingredients"
+          class="ingredient"
+        >
+          {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
+        </li>
+      </ul>
+    </div>
   </div>
 </main>
 
