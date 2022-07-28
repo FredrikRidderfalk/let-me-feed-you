@@ -3,9 +3,16 @@
 
 <main>
   <div class="container__recipes-intro">
-    <h1 class="title">crack noodles.</h1>
-    <p class="subtitle">My cabbages need the crack noodles!</p>
-    <!-- <p>{{ CrackNoodles.name }}</p> -->
+    <h1 class="title">{{ CrackNoodles.name }}</h1>
+    <p class="subtitle">{{ CrackNoodles.description }}</p>
+    <ul class="ingredient-list">
+      <li
+        *ngFor="let ingredient of CrackNoodles.ingredients"
+        class="ingredient"
+      >
+        {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
+      </li>
+    </ul>
   </div>
 </main>
 

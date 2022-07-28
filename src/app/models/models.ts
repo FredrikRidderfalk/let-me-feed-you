@@ -1,22 +1,21 @@
+// Guide
 export interface Guide {
     title: string;
     content: string;
 }
 
-export interface Tags {
-    quick: boolean;
-    easy: boolean;
-    temperature: {
-        value: string;
-        unit: string;
-    };
-    lesswash: boolean;
-    cheap: boolean;
-}
+// Recipe
 
 export interface Temperature {
     value: string;
     unit: string;
+}
+export interface Tags {
+    quick: boolean;
+    easy: boolean;
+    temperature: Temperature
+    lesswash: boolean;
+    cheap: boolean;
 }
 
 export interface Ingredient {
@@ -27,5 +26,15 @@ export interface Ingredient {
 
 export interface FlexItem {
     ingredient: string;
-    substitute: string;
+    substitutes: string;
+}
+
+export interface Recipe {
+    name: string;
+    description: string;
+    tags: Tags;
+    ingredients: Ingredient[];
+    flex: FlexItem[];
+    instructions: string[];
+    notes: string;
 }
