@@ -3,7 +3,7 @@
 
 <main>
   <div class="container__recipes-intro">
-    <h1 class="title">{{ CrackNoodles.name }}</h1>
+    <h1 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h1>
     <p class="subtitle">{{ CrackNoodles.description }}</p>
 
     <div class="container__recipe-img">
@@ -14,16 +14,41 @@
       />
     </div>
 
-    <div class="container__ingredients">
-      <h2 class="ingredients__title">Ingredients</h2>
-      <ul class="ingredient-list">
-        <li
-          *ngFor="let ingredient of CrackNoodles.ingredients"
-          class="ingredient"
-        >
-          {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
+    <div class="container__ingredients-flex">
+      <div class="container__ingredients">
+        <h2 class="ingredients__title">ingredients.</h2>
+        <ul class="ingredient-list">
+          <li
+            *ngFor="let ingredient of CrackNoodles.ingredients"
+            class="ingredient"
+          >
+            {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="container__flex">
+        <h2 class="flex__title">flex.</h2>
+        <ul class="ingredient-list">
+          <li *ngFor="let flexItem of CrackNoodles.flex" class="flex-item">
+            <strong>{{ flexItem.ingredient }}</strong>
+            {{ flexItem.substitutes }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container__instructions">
+      <ul class="instructions">
+        <li *ngFor="let step of CrackNoodles.instructions" class="flex-item">
+          {{ step }}
         </li>
       </ul>
+    </div>
+
+    <div class="container__notes">
+      <h2 class="notes__title">notes.</h2>
+      <p class="notes__text">{{ CrackNoodles.notes }}</p>
     </div>
   </div>
 </main>
