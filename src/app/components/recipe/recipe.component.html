@@ -3,16 +3,18 @@
 
 <main>
   <div class="container__recipe-intro">
-    <h1 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h1>
-    <p class="subtitle">{{ CrackNoodles.description }}</p>
-  </div>
+    <div class="container__recipe-intro__text">
+      <h1 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h1>
+      <p class="subtitle">{{ CrackNoodles.description }}</p>
+    </div>
 
-  <div class="container__recipe-img">
-    <img
-      src="{{ getImageUrl() }}"
-      alt="{{ CrackNoodles.name }}."
-      class="recipe-img"
-    />
+    <div class="container__recipe-img">
+      <img
+        src="{{ getImageUrl() }}"
+        alt="{{ CrackNoodles.name }}."
+        class="recipe-img"
+      />
+    </div>
   </div>
 
   <div class="container__ingredients-flex">
