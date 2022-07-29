@@ -5,6 +5,10 @@ main
     margin-block: rem(30)
 h2
     font-size: rem(30)
+h1, h2, p, li, .material-symbols-outlined
+    color: $lmfy-lightgray
+strong
+    color: $lmfy-darkgray
 .container__recipe-intro__text, .container__ingredients-flex, .container__instructions, .container__notes
     padding-inline: rem(20)
 
@@ -23,11 +27,14 @@ h2
 
 // Ingredients-flex
 .ingredients__title, .flex__title
-    margin-top: rem(20)
+    margin-top: rem(40)
+.ingredient-list, .flex-list
+    margin-top: rem(40)
 .ingredient-list
     padding-left: 32px
 .ingredient
     list-style-type: katakana-iroha
+    line-height: 2
 
 // Instructions
 .container__instructions
@@ -76,27 +83,32 @@ h2
             box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
     .container__ingredients, .container__flex
         width: 50%
+    .container__ingredients
         position: relative
-    .container__ingredients::before
-        content: ""
-        top: 55%
-        right: 30px
-        transform: translateY(-50%)
-        position: absolute
-        width: 1px
-        height: 90%
-        background-color: rgba(0, 0, 0, 0.15)
-        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
-    // .flex-item::before
-    //     content: ""
-    //     bottom: 0
-    //     left: 50%
-    //     transform: translateX(-50%)
-    //     position: absolute
-    //     width: 50%
-    //     height: 1px
-    //     background-color: rgba(0, 0, 0, 0.15)
-    //     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
+        &::before
+            content: ""
+            top: 55%
+            right: 30px
+            transform: translateY(-50%)
+            position: absolute
+            width: 1px
+            height: 90%
+            background-color: rgba(0, 0, 0, 0.15)
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
+    .flex-item
+        position: relative
+        &:nth-child(n+2)
+            margin-top: rem(60)
+        &:not(:last-child)::before
+            content: ""
+            bottom: rem(-30)
+            left: 50%
+            transform: translateX(-50%)
+            position: absolute
+            width: 50%
+            height: 1px
+            background-color: rgba(0, 0, 0, 0.15)
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
 
     // Instructions
     .container__instructions
