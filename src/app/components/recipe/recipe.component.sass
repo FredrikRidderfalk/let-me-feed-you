@@ -3,20 +3,28 @@
 // General
 main
     margin-block: rem(30)
+h1
+    font-size: rem(120)
 h2
     font-size: rem(30)
 h1, h2, p, li, .material-symbols-outlined
     color: $lmfy-lightgray
 strong
     color: $lmfy-darkgray
-.container__recipe-intro__text, .container__ingredients-flex, .container__instructions, .container__notes
+.container__recipe-intro__text, .container__tags, .container__ingredients-flex, .container__instructions, .container__notes
     padding-inline: rem(20)
 
 // Recipe intro
 .title
     font-size: rem(40)
+    margin-top: rem(20)
 .subtitle
     margin-top: rem(10)
+.container__tags
+    display: flex
+.container__text-tags
+    @include flex-space-between
+    flex-direction: column
 
 // Recipe image
 .container__recipe-img
@@ -29,7 +37,7 @@ strong
 .ingredients__title, .flex__title
     margin-top: rem(40)
 .ingredient-list, .flex-list
-    margin-top: rem(40)
+    margin-top: rem(26)
 .ingredient-list
     padding-left: 32px
 .ingredient
@@ -43,6 +51,8 @@ strong
 // Notes
 .container__notes
     margin-top: rem(20)
+.notes__title
+    font-size: rem(24)
 
 // Media queries
 @media screen and (min-width: 768px)
@@ -50,7 +60,7 @@ strong
     main
         padding-inline: rem(30)
         margin-inline: auto
-        max-width: 900px
+        max-width: 1100px
     .container__ingredients-flex, .container__instructions, .container__notes
         padding-inline: 0
     .container__recipe-intro

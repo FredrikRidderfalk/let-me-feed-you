@@ -3,9 +3,21 @@
 
 <main>
   <div class="container__recipe-intro">
-    <div class="container__recipe-intro__text">
-      <h1 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h1>
-      <p class="subtitle">{{ CrackNoodles.description }}</p>
+    <div class="container__text-tags">
+      <div class="container__recipe-intro__text">
+        <h1 class="large-title">Recipe</h1>
+        <h2 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h2>
+        <p class="subtitle">{{ CrackNoodles.description }}</p>
+      </div>
+      <div class="container__tags">
+        <app-quick *ngIf="CrackNoodles.tags.quick"></app-quick>
+        <app-easy *ngIf="CrackNoodles.tags.easy"></app-easy>
+        <app-temperature
+          *ngIf="CrackNoodles.tags.temperature"
+        ></app-temperature>
+        <app-wash *ngIf="CrackNoodles.tags.lesswash"></app-wash>
+        <app-cheap *ngIf="CrackNoodles.tags.cheap"></app-cheap>
+      </div>
     </div>
 
     <div class="container__recipe-img">
