@@ -76,6 +76,16 @@ h2
             box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
     .container__ingredients, .container__flex
         width: 50%
+    .container__ingredients::before
+        content: ""
+        top: 55%
+        left: 45%
+        transform: translateY(-50%)
+        position: absolute
+        width: 1px
+        height: 90%
+        background-color: rgba(0, 0, 0, 0.15)
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
 
     // Instructions
     .container__instructions
