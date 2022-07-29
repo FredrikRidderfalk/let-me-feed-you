@@ -6,7 +6,8 @@
     <div class="container__text-tags">
       <div class="container__recipe-intro__text">
         <h1 class="large-title">Recipe</h1>
-        <h2 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h2>
+        <!-- <h2 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h2> -->
+        <h2 class="title">{{ CrackNoodles.name }}</h2>
         <p class="subtitle">{{ CrackNoodles.description }}</p>
       </div>
       <div class="container__tags">
@@ -31,7 +32,7 @@
 
   <div class="container__ingredients-flex">
     <div class="container__ingredients">
-      <h2 class="ingredients__title">ingredients.</h2>
+      <h2 class="ingredients__title">Ingredients</h2>
       <ul class="ingredient-list">
         <li
           *ngFor="let ingredient of CrackNoodles.ingredients"
@@ -44,7 +45,7 @@
 
     <div class="container__flex">
       <h2 class="flex__title">
-        flex. <span class="material-symbols-outlined">help</span>
+        Flex <span class="material-symbols-outlined">help</span>
       </h2>
       <ul class="flex-list">
         <li *ngFor="let flexItem of CrackNoodles.flex" class="flex-item">
@@ -56,7 +57,7 @@
   </div>
 
   <div class="container__instructions">
-    <h2 class="instructions__title">instructions.</h2>
+    <h2 class="instructions__title">Instructions</h2>
     <ul class="instructions">
       <li *ngFor="let step of CrackNoodles.instructions" class="instruction">
         {{ step }}
@@ -65,7 +66,7 @@
   </div>
 
   <div class="container__notes">
-    <h2 class="notes__title">notes.</h2>
+    <h2 class="notes__title">Notes</h2>
     <p class="notes__text">{{ CrackNoodles.notes }}</p>
   </div>
 </main>
