@@ -2,15 +2,17 @@
 
 // General
 main
-    margin-block: rem(30)
+    margin-block: rem(30) rem(70)
 h1
     font-size: rem(120)
 h2
     font-size: rem(30)
+    font-weight: 600
 h1, h2, p, li, .material-symbols-outlined
     color: $lmfy-lightgray
 strong
     color: $lmfy-darkgray
+    font-weight: 600
 .container__recipe-intro__text, .container__tags, .container__ingredients-flex, .container__instructions, .container__notes
     padding-inline: rem(20)
 
@@ -18,16 +20,17 @@ strong
 .container__recipe-intro__text
     max-width: 450px
 .title
-    font-size: rem(40)
-    margin-top: rem(20)
+    font-size: rem(28)
+    margin-top: rem(40)
 .subtitle
-    margin-top: rem(10)
+    margin-top: rem(20)
 .container__tags
     display: flex
     margin-top: rem(20)
 .container__text-tags
     @include flex-space-between
     flex-direction: column
+    padding: rem(30) // remove if wanting to align with edges of image
 
 // Recipe image
 .container__recipe-img
@@ -84,9 +87,10 @@ strong
     .container__ingredients-flex
         display: flex
         position: relative
+        margin-top: rem(30)
         &::before
             content: ""
-            bottom: -40px
+            bottom: -80px
             left: 50%
             transform: translateX(-50%)
             position: absolute
@@ -125,7 +129,14 @@ strong
 
     // Instructions
     .container__instructions
-        margin-top: rem(80)
+        margin-top: rem(150)
+    .instructions
+        margin-top: rem(26)
+    // Notes
+    .notes__title
+        margin-top: rem(50)
+    .notes__text
+        margin-top: rem(10)
 
 @media screen and (min-width: 1366px)
     .recipe-img

@@ -11,17 +11,22 @@
 .nav-links
     display: flex
 .link
-    color: $lmfy-lightgray
+    color: $lmfy-darkgray
     font-size: rem(24)
-    font-weight: 600
-    text-decoration: underline wavy
-    text-decoration-thickness: rem(1.5)
-    text-underline-offset: rem(6)
+    font-weight: 500
+    // text-decoration: underline wavy
+    // text-decoration-thickness: rem(1.5)
+    // text-underline-offset: rem(6)
     padding: rem(3)
 .container__link, .container__logo, .container__notifications
-    padding-inline: rem(50)
+    padding-inline: rem(30)
 .logo
     width: 60px
 .material-symbols-outlined
     font-size: rem(35)
-    color: $lmfy-lightgray
+    color: $lmfy-darkgray
+
+// Media queries
+@media screen and (min-width: 768px)
+    .container__navbar-content
+        max-width: 1100px
