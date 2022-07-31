@@ -4,7 +4,7 @@
 main
     margin-block: rem(30) rem(70)
 h1
-    font-size: rem(120)
+    font-size: rem(80)
 h2
     font-size: rem(30)
     font-weight: 600
@@ -30,7 +30,6 @@ strong
 .container__text-tags
     @include flex-space-between
     flex-direction: column
-    padding: rem(30) // remove if wanting to align with edges of image
 
 // Recipe image
 .container__recipe-img
@@ -67,6 +66,8 @@ strong
         padding-inline: rem(30)
         margin-inline: auto
         max-width: 1100px
+    h1
+        font-size: rem(120)
     .container__ingredients-flex, .container__instructions, .container__notes
         padding-inline: 0
     .container__recipe-intro
@@ -82,6 +83,8 @@ strong
         object-fit: fill
     .container__recipe-intro__text
         width: 100%
+    .container__text-tags
+        padding: rem(30) // remove if wanting to align with edges of image
 
     // Ingredients-flex
     .container__ingredients-flex
