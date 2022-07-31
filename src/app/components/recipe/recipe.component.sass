@@ -66,7 +66,7 @@ strong
     main
         padding-inline: rem(30)
         margin-inline: auto
-        max-width: 1100px
+        max-width: 1120px
     h1
         font-size: rem(120)
     .container__ingredients-flex, .container__instructions, .container__notes
@@ -82,9 +82,8 @@ strong
     .recipe-img
         width: 100%
         object-fit: fill
-    .container__recipe-intro__text
-        width: 100%
     .container__text-tags
+        width: 100%
         padding: rem(30) // remove if wanting to align with edges of image
 
     // Ingredients-flex
@@ -144,8 +143,8 @@ strong
         margin-top: rem(10)
 
 @media screen and (min-width: 1366px)
-    // main
-    //     max-width: 1100px
-    //     border: 1px solid magenta
     .ingredient, .instructions, .notes__text, .flex-item, .description-text
         font-size: rem(20)
+    .container__tags
+        display: flex
+        // flex-wrap: nowrap
