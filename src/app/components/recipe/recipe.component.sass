@@ -22,7 +22,7 @@ strong
 .title
     font-size: rem(28)
     margin-top: rem(40)
-.subtitle
+.description-text
     margin-top: rem(20)
 .container__tags
     display: flex
@@ -132,6 +132,7 @@ strong
         margin-top: rem(150)
     .instructions
         margin-top: rem(26)
+        font-size: rem(16)
     // Notes
     .notes__title
         margin-top: rem(50)
@@ -139,5 +140,8 @@ strong
         margin-top: rem(10)
 
 @media screen and (min-width: 1366px)
-    .recipe-img
-        width: 500px
+    // main
+    //     max-width: 1100px
+    //     border: 1px solid magenta
+    .ingredient, .instructions, .notes__text, .flex-item, .description-text
+        font-size: rem(20)
