@@ -6,42 +6,42 @@ footer
     padding: rem(40) rem(10) rem(10)
 .footer-title
     color: $lmfy-darkgray
-.container__footer-content
-    height: 150px
+.footer__right
+    margin-bottom: rem(10)
 .socials a
     display: inline-block
-    margin: rem(8)
+    margin: rem(6)
 .socials
     font-size: 0
+    margin-top: rem(20)
 .social
-    width: 60px
+    width: 50px
 .green
     background-color: $lmfy-lightgreen
     border: 2px solid $lmfy-darkgreen
     border-radius: 6px
-    padding: rem(10)
 .purple
     background-color: $lmfy-lightpurple
     border: 2px solid $lmfy-darkpurple
     border-radius: 6px
-    padding: rem(10)
 .orange
     background-color: $lmfy-lightorange
     border: 2px solid $lmfy-darkorange
     border-radius: 6px
-    padding: rem(10)
 .blue
     background-color: $lmfy-lightblue
     border: 2px solid $lmfy-darkblue
     border-radius: 6px
-    padding: rem(10)
 .yellow
     background-color: $lmfy-lightyellow
     border: 2px solid $lmfy-darkyellow
     border-radius: 6px
-    padding: rem(10)
+.green, .purple, .orange, .blue, .yellow
+    padding: rem(8)
+
 .page-links
     font-size: rem(16)
+    margin-top: rem(20)
 .copyright
     margin-top: rem(20)
     p
@@ -62,3 +62,9 @@ footer
     .footer__right, .footer__left
         @include flex-space-between
         flex-direction: column
+    .socials a
+        margin: rem(8)
+    .social
+        width: 60px
+    .green, .purple, .orange, .blue, .yellow
+        padding: rem(10)
