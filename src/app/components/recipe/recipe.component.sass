@@ -4,6 +4,7 @@
 main
     margin-block: rem(30) rem(70)
     position: relative
+    overflow-x: clip
 h1
     font-size: rem(80)
 h2
@@ -20,11 +21,11 @@ strong
 // Decor images
 .decor-img
     width: 250px
-    opacity: 0.2
+    opacity: 0.06
     position: absolute
     z-index: -1
 .chopsticks
-    width: 350px
+    width: 70%
     top: -70px
     right: 0
 .garlic
@@ -32,7 +33,7 @@ strong
     left: -80px
 .lime
     top: 1200px
-    right: -100px
+    right: -130px
 .sugarbeet
     bottom: -170px
     right: 0
@@ -92,6 +93,23 @@ strong
         font-size: rem(120)
     .container__ingredients-flex, .container__instructions, .container__notes
         padding-inline: 0
+    .chopsticks
+        // width: 70%
+        // top: -70px
+        // right: 0
+    .garlic
+        width: 350px
+        top: 1100px
+        left: -100px
+    .lime
+        width: 320px
+        top: 900px
+        right: -160px
+    .sugarbeet
+        width: 350px
+        bottom: -240px
+        // right: 0
+    // Hero
     .container__recipe-intro
         display: flex
         flex-direction: row-reverse
@@ -163,9 +181,18 @@ strong
     .notes__text
         margin-top: rem(10)
 
+@media screen and (min-width: 1100px)
+    main
+        overflow-x: visible
+    .chopsticks
+        right: 0
+    .lime
+        right: 0
 @media screen and (min-width: 1366px)
     .ingredient, .instructions, .notes__text, .flex-item, .description-text
         font-size: rem(20)
     .container__tags
         display: flex
         // flex-wrap: nowrap
+    .chopsticks
+        right: -100px

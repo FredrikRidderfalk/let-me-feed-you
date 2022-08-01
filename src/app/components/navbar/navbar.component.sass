@@ -1,7 +1,8 @@
 @use "../../abstracts" as *
 
 .container__navigation
-    background-color: $lmfy-gray
+    background-color: $lmfy-gray-transparent
+    backdrop-filter: blur(3px)
     padding-block: rem(20)
 .container__navbar-content
     @include flex-space-between
