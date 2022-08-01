@@ -31,6 +31,7 @@ export interface FlexItem {
 
 export interface Recipe {
     name: string;
+    star: boolean;
     description: string;
     tags: Tags;
     ingredients: Ingredient[];

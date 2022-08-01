@@ -7,7 +7,9 @@
       <div class="container__recipe-intro__text">
         <h1 class="large-title">Recipe</h1>
         <!-- <h2 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h2> -->
-        <h2 class="title">{{ CrackNoodles.name }}</h2>
+        <h2 class="title">
+          {{ CrackNoodles.name }} <span *ngIf="CrackNoodles.star">⭐️</span>
+        </h2>
         <p class="description-text">{{ CrackNoodles.description }}</p>
       </div>
       <div class="container__tags">
