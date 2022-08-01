@@ -1,4 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Recipe } from 'src/app/models/models';
+import CrackNoodles from "../../../assets/recipes/crack-noodles.json"
 
 @Component({
   selector: 'app-recipes',
@@ -8,6 +10,12 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class RecipesComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
+  CrackNoodles: Recipe = CrackNoodles
+
+  getImageUrl() {
+    const imageName = CrackNoodles.name.toLowerCase().replace(/ /g, '')
+    return `/assets/photos/${imageName}.jpg`
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
