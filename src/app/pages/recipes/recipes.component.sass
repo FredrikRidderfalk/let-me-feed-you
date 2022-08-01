@@ -17,8 +17,8 @@
     width: 100%
     min-height: 200px
     display: flex
-    border: 2px solid $lmfy-darkgray
-    overflow: hidden
+    margin-block: rem(60)
+    position: relative
 .recipe-img
     display: block
     width: 150px
@@ -48,3 +48,25 @@
 .cheap
     background-color: $lmfy-lightyellow
     border: 2px solid $lmfy-darkyellow
+.back-to-top
+    width: fit-content
+    text-decoration: underline wavy
+    text-underline-offset: rem(3)
+    margin-block: rem(30)
+    margin-inline: auto
+
+// Media queries
+@media screen and (max-width: 767px)
+    .container__recipe::before
+        content: ""
+        bottom: rem(-30)
+        left: 50%
+        transform: translateX(-50%)
+        position: absolute
+        width: 50%
+        height: 2px
+        background-color: rgba(0, 0, 0, 0.15)
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
+@media screen and (min-width: 768px)
+    .container__recipe
+        border: 2px solid $lmfy-darkgray
