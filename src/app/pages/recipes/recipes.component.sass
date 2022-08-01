@@ -1,5 +1,8 @@
 @use "../../abstracts" as *
 
+main
+    max-width: 1360px
+    margin-inline: auto
 .container__recipes-intro
     padding: rem(20)
 .title, .subtitle, .recipe-title
@@ -68,5 +71,15 @@
         background-color: rgba(0, 0, 0, 0.15)
         box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
 @media screen and (min-width: 768px)
+    .recipes
+        display: flex
+        justify-content: space-evenly
+        flex-wrap: wrap
+    .link
+        margin-inline: rem(10)
     .container__recipe
         border: 2px solid $lmfy-darkgray
+        max-width: 400px
+        margin-inline: auto
+        margin-block: rem(20)
+@media screen and (min-width: 900px)
