@@ -2,7 +2,73 @@
 <app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
 
 <main>
-  <h1 class="title">Plant-Based News</h1>
+  <div id="stories-intro" class="container__stories-intro">
+    <h1 class="title">Stories</h1>
+    <p class="subtitle">Habibi write something here pweeease!</p>
+  </div>
+
+  <div class="stories">
+    <a routerLink="/story" class="link">
+      <div class="container__story">
+        <div class="container__story-img">
+          <img
+            src="/assets/story-placeholder.png"
+            alt="Title of the post."
+            class="story-img"
+          />
+        </div>
+        <div class="container__story-content">
+          <h2 class="story-title">Name of story</h2>
+          <p class="story-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus
+            asperiores assumenda quibusdam, exercitationem!
+          </p>
+        </div>
+      </div>
+    </a>
+
+    <a routerLink="/story" class="link">
+      <div class="container__story">
+        <div class="container__story-img">
+          <img
+            src="/assets/story-placeholder.png"
+            alt="Title of the post."
+            class="story-img"
+          />
+        </div>
+        <div class="container__story-content">
+          <h2 class="story-title">Name of story</h2>
+          <p class="story-description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
+            accusantium minima ea?
+          </p>
+        </div>
+      </div>
+    </a>
+
+    <a routerLink="/story" class="link">
+      <div class="container__story">
+        <div class="container__story-img">
+          <img
+            src="/assets/story-placeholder.png"
+            alt="Title of the post."
+            class="story-img"
+          />
+        </div>
+        <div class="container__story-content">
+          <h2 class="story-title">Name of story</h2>
+          <p class="story-description">
+            Lorem ipsum dolor sit amet consectetur porro neque vel optio
+            pariatur ipsa eaque.
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="back-to-top">
+    <a href="/stories#stories-intro">Back to the top</a>
+  </div>
 </main>
 
 <app-footer id="footer"></app-footer>
