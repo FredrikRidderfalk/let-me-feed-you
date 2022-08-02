@@ -37,6 +37,13 @@ export class RecipesComponent implements OnInit {
   ngOnInit(): void {
     this.getScreenWidth = window.innerWidth;
     this.checkScreenWidth()
+
+    // Plant-based recipe API
+    const url = "https://plant-based-recipes-api.herokuapp.com/recipes"
+
+    fetch(url)
+    .then(res=>res.json())
+    .then(recipes=>console.log(recipes))
   }
 
 }
