@@ -7,6 +7,7 @@
     <p class="subtitle">Habibi write something here pwease!</p>
   </div>
 
+  <!-- Foods -->
   <div class="recipes">
     <a routerLink="/recipe" class="link">
       <div class="container__recipe">
@@ -43,6 +44,7 @@
       </div>
     </a>
 
+    <!-- Desserts -->
     <a routerLink="/recipe" class="link">
       <div class="container__recipe">
         <div class="container__recipe-img">
@@ -78,40 +80,46 @@
       </div>
     </a>
 
-    <a routerLink="/recipe" class="link">
-      <div class="container__recipe">
-        <div class="container__recipe-img">
-          <img
-            src="{{ getImageUrl() }}"
-            alt="{{ CrackNoodles.name }}."
-            class="recipe-img"
-          />
-        </div>
-        <div class="container__recipe-content">
-          <h2 class="recipe-title">{{ CrackNoodles.name }}</h2>
-          <div class="container__small-tags">
-            <div *ngIf="CrackNoodles.tags.quick" class="small-tag quick">
-              <span>Quick</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.easy" class="small-tag easy">
-              <span>Easy</span>
-            </div>
-            <div
-              *ngIf="CrackNoodles.tags.temperature.value"
-              class="small-tag temperature"
-            >
-              <span>Temperature</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.lesswash" class="small-tag lesswash">
-              <span>Less wash</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.cheap" class="small-tag cheap">
-              <span>Cheap</span>
+    <!-- Drinks -->
+    <ng-container
+      *ngFor="let drink of Recipes.drinks"
+      class="container__drinks"
+    >
+      <a routerLink="/recipe" class="link">
+        <div class="container__recipe">
+          <div class="container__recipe-img">
+            <img
+              src="{{ getImageUrl() }}"
+              alt="{{ drink.name }}."
+              class="recipe-img"
+            />
+          </div>
+          <div class="container__recipe-content">
+            <h2 class="recipe-title">{{ drink.name }}</h2>
+            <div class="container__small-tags">
+              <div *ngIf="drink.tags.quick" class="small-tag quick">
+                <span>Quick</span>
+              </div>
+              <div *ngIf="drink.tags.easy" class="small-tag easy">
+                <span>Easy</span>
+              </div>
+              <div
+                *ngIf="drink.tags.temperature.value"
+                class="small-tag temperature"
+              >
+                <span>Temperature</span>
+              </div>
+              <div *ngIf="drink.tags.lesswash" class="small-tag lesswash">
+                <span>Less wash</span>
+              </div>
+              <div *ngIf="drink.tags.cheap" class="small-tag cheap">
+                <span>Cheap</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </ng-container>
   </div>
 
   <div class="back-to-top">

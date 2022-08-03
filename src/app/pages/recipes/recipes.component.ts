@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Recipe } from 'src/app/models/models';
+import { Recipe, Recipes } from 'src/app/models/models';
 import CrackNoodles from "../../../assets/recipes/crack-noodles.json"
+import RecipesDB from "../../../assets/recipes/recipes.json"
 
 @Component({
   selector: 'app-recipes',
@@ -11,6 +12,7 @@ export class RecipesComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
   CrackNoodles: Recipe = CrackNoodles
+  Recipes: Recipes = RecipesDB
 
   getImageUrl() {
     const imageName = CrackNoodles.name.toLowerCase().replace(/ /g, '')

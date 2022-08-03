@@ -39,3 +39,9 @@ export interface Recipe {
     instructions: string[];
     notes: string;
 }
+
+export interface Recipes {
+    foods: Recipe[]
+    desserts: Recipe[]
+    drinks: Recipe[]
+}
