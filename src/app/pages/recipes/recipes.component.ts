@@ -39,11 +39,12 @@ export class RecipesComponent implements OnInit {
     this.checkScreenWidth()
 
     // Plant-based recipe API
-    const url = "https://plant-based-recipes-api.herokuapp.com/recipes"
+    // const proxy = "https://cors-anywhere.herokuapp.com/"
+    // const url = "https://plant-based-recipes-api.herokuapp.com"
 
-    fetch(url)
-    .then(res=>res.json())
-    .then(recipes=>console.log(recipes))
+    // fetch(`${proxy}${url}`)
+    // .then(res=>res.json())
+    // .then(recipes=>console.log(recipes))
   }
 
 }
