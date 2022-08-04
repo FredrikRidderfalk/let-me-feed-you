@@ -105,7 +105,9 @@
             />
           </div>
           <div class="container__recipe-content">
-            <h2 class="recipe-title">{{ drink.name }}</h2>
+            <h2 class="recipe-title">
+              {{ drink.name }}<span *ngIf="drink.star"> ⭐️</span>
+            </h2>
             <div class="container__small-tags">
               <div *ngIf="drink.tags.quick" class="small-tag quick">
                 <span>Quick</span>
@@ -146,7 +148,9 @@
             />
           </div>
           <div class="container__recipe-content">
-            <h2 class="recipe-title">{{ dessert.name }}</h2>
+            <h2 class="recipe-title">
+              {{ dessert.name }}<span *ngIf="dessert.star"> ⭐️</span>
+            </h2>
             <div class="container__small-tags">
               <div *ngIf="dessert.tags.quick" class="small-tag quick">
                 <span>Quick</span>
