@@ -18,7 +18,9 @@ import { QuickComponent } from './components/tags/quick/quick.component';
 import { WashComponent } from './components/tags/wash/wash.component';
 import { TemperatureComponent } from './components/tags/temperature/temperature.component';
 
-import { HttpClientModule } from "@angular/common/http"
+import { HttpClientModule } from "@angular/common/http";
+import { OkonomiyakiComponent } from './pages/recipes/foods/okonomiyaki/okonomiyaki.component';
+import { BurgersComponent } from './pages/recipes/foods/burgers/burgers.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { HttpClientModule } from "@angular/common/http"
     EasyComponent,
     QuickComponent,
     WashComponent,
-    TemperatureComponent
+    TemperatureComponent,
+    OkonomiyakiComponent,
+    BurgersComponent
   ],
   imports: [
     BrowserModule,
