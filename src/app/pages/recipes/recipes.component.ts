@@ -43,12 +43,13 @@ export class RecipesComponent implements OnInit {
     this.getScreenWidth = window.innerWidth;
     this.checkScreenWidth()
 
-    this.service.getAPIData().subscribe(response => {
-      this.recipes = response
-      console.log(response)
-    })
+    // Plant-based recipe API #1
+    // this.service.getAPIData().subscribe(response => {
+    //   this.recipes = response
+    //   console.log(response)
+    // })
 
-    // Plant-based recipe API
+    // Plant-based recipe API #2
     // const proxy = "https://cors-anywhere.herokuapp.com/"
     // const url = "https://plant-based-recipes-api.herokuapp.com/recipes"
 
