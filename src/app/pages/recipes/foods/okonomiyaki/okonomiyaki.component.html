@@ -1,1 +1,88 @@
-<p>okonomiyaki works!</p>
+<app-mobile-navbar *ngIf="isMobile" id="navbar"></app-mobile-navbar>
+<app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
+
+<main>
+  <div class="container__recipe-intro">
+    <div class="container__text-tags">
+      <div class="container__recipe-intro__text">
+        <h1 class="large-title">Recipe</h1>
+        <h2 class="title">
+          {{ CrackNoodles.name }} <span *ngIf="CrackNoodles.star">⭐️</span>
+        </h2>
+        <p class="description-text">{{ CrackNoodles.description }}</p>
+      </div>
+      <div class="container__tags">
+        <app-quick *ngIf="CrackNoodles.tags.quick"></app-quick>
+        <app-easy *ngIf="CrackNoodles.tags.easy"></app-easy>
+        <app-temperature
+          *ngIf="CrackNoodles.tags.temperature.value"
+        ></app-temperature>
+        <app-wash *ngIf="CrackNoodles.tags.lesswash"></app-wash>
+        <app-cheap *ngIf="CrackNoodles.tags.cheap"></app-cheap>
+      </div>
+    </div>
+
+    <div class="container__recipe-img">
+      <img
+        src="{{ getImageUrl() }}"
+        alt="{{ CrackNoodles.name }}."
+        class="recipe-img"
+      />
+    </div>
+  </div>
+
+  <div class="container__ingredients-flex">
+    <div class="container__ingredients">
+      <h2 class="ingredients__title">Ingredients</h2>
+      <ul class="ingredient-list">
+        <li
+          *ngFor="let ingredient of CrackNoodles.ingredients"
+          class="ingredient"
+        >
+          {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="container__flex">
+      <h2 class="flex__title">
+        Flex <span class="material-symbols-outlined">help</span>
+      </h2>
+      <ul class="flex-list">
+        <li *ngFor="let flexItem of CrackNoodles.flex" class="flex-item">
+          <strong>{{ flexItem.ingredient }}</strong>
+          {{ flexItem.substitutes }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container__instructions">
+    <h2 class="instructions__title">Instructions</h2>
+    <ul class="instructions">
+      <li *ngFor="let step of CrackNoodles.instructions" class="instruction">
+        {{ step }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="container__notes">
+    <h2 class="notes__title">Notes</h2>
+    <p class="notes__text">{{ CrackNoodles.notes }}</p>
+  </div>
+
+  <img
+    src="/assets/chopsticks.png"
+    alt="Chopsticks."
+    class="decor-img chopsticks"
+  />
+  <img src="/assets/garlic.png" alt="Garlic." class="decor-img garlic" />
+  <img src="/assets/lime.png" alt="Lime." class="decor-img lime" />
+  <img
+    src="/assets/sugarbeet.png"
+    alt="Sugarbeet."
+    class="decor-img sugarbeet"
+  />
+</main>
+
+<app-footer id="footer"></app-footer>
