@@ -18,6 +18,8 @@ import { QuickComponent } from './components/tags/quick/quick.component';
 import { WashComponent } from './components/tags/wash/wash.component';
 import { TemperatureComponent } from './components/tags/temperature/temperature.component';
 
+import { HttpClientModule } from "@angular/common/http"
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { TemperatureComponent } from './components/tags/temperature/temperature.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

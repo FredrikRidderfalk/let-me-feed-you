@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Recipe, Recipes } from 'src/app/models/models';
 import CrackNoodles from "../../../assets/recipes/crack-noodles.json"
 import RecipesDB from "../../../assets/recipes/recipes.json"
+import { ApiService } from "../../services/api.service"
 
 @Component({
   selector: 'app-recipes',
@@ -34,15 +35,22 @@ export class RecipesComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  recipes: any
+
+  constructor(private service: ApiService) { }
 
   ngOnInit(): void {
     this.getScreenWidth = window.innerWidth;
     this.checkScreenWidth()
 
+    this.service.getAPIData().subscribe(response => {
+      this.recipes = response
+      console.log(response)
+    })
+
     // Plant-based recipe API
     // const proxy = "https://cors-anywhere.herokuapp.com/"
-    // const url = "https://plant-based-recipes-api.herokuapp.com"
+    // const url = "https://plant-based-recipes-api.herokuapp.com/recipes"
 
     // fetch(`${proxy}${url}`)
     // .then(res=>res.json())
