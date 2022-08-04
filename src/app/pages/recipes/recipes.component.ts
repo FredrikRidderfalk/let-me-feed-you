@@ -14,8 +14,8 @@ export class RecipesComponent implements OnInit {
   CrackNoodles: Recipe = CrackNoodles
   Recipes: Recipes = RecipesDB
 
-  getImageUrl() {
-    const imageName = CrackNoodles.name.toLowerCase().replace(/ /g, '')
+  getImageUrl(foodType: { name: string; }) {
+    const imageName = foodType.name.toLowerCase().replace(/ /g, '')
     return `/assets/photos/${imageName}.jpg`
   }
 

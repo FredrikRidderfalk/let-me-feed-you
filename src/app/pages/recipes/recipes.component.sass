@@ -14,6 +14,18 @@ main
 .subtitle
     font-size: rem(20)
     margin-top: rem(20)
+.container__filter-buttons
+    padding: rem(20)
+    button
+        background-color: $lmfy-white
+        border: 2px solid $lmfy-black
+        border-radius: 6px
+        color: $lmfy-darkgray
+        padding: rem(8) rem(16)
+        font-size: rem(20)
+        font-weight: 500
+        margin-right: rem(10)
+        min-width: 130px
 
 // Recipe cards
 .container__recipe
@@ -73,8 +85,9 @@ main
 @media screen and (min-width: 768px)
     .recipes
         display: flex
-        justify-content: space-evenly
+        justify-content: flex-start
         flex-wrap: wrap
+        padding-inline: rem(10)
     .link
         margin-inline: rem(10)
     .container__recipe

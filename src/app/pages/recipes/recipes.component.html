@@ -7,9 +7,15 @@
     <p class="subtitle">Habibi write something here pwease!</p>
   </div>
 
+  <div class="container__filter-buttons">
+    <button id="foods-btn" class="foods-button active">Foods</button>
+    <button id="drinks-btn" class="drinks-button">Drinks</button>
+    <button id="desserts-btn" class="desserts-button">Desserts</button>
+  </div>
+
   <!-- Foods -->
   <div class="recipes">
-    <a routerLink="/recipe" class="link">
+    <!-- <a routerLink="/recipe" class="link">
       <div class="container__recipe">
         <div class="container__recipe-img">
           <img
@@ -42,43 +48,45 @@
           </div>
         </div>
       </div>
-    </a>
+    </a> -->
 
-    <!-- Desserts -->
-    <a routerLink="/recipe" class="link">
-      <div class="container__recipe">
-        <div class="container__recipe-img">
-          <img
-            src="{{ getImageUrl() }}"
-            alt="{{ CrackNoodles.name }}."
-            class="recipe-img"
-          />
-        </div>
-        <div class="container__recipe-content">
-          <h2 class="recipe-title">{{ CrackNoodles.name }}</h2>
-          <div class="container__small-tags">
-            <div *ngIf="CrackNoodles.tags.quick" class="small-tag quick">
-              <span>Quick</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.easy" class="small-tag easy">
-              <span>Easy</span>
-            </div>
-            <div
-              *ngIf="CrackNoodles.tags.temperature.value"
-              class="small-tag temperature"
-            >
-              <span>Temperature</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.lesswash" class="small-tag lesswash">
-              <span>Less wash</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.cheap" class="small-tag cheap">
-              <span>Cheap</span>
+    <!-- Foods -->
+    <ng-container *ngFor="let food of Recipes.foods" class="container__drinks">
+      <a routerLink="/recipe" class="link">
+        <div class="container__recipe">
+          <div class="container__recipe-img">
+            <img
+              src="{{ getImageUrl(food) }}"
+              alt="{{ food.name }}."
+              class="recipe-img"
+            />
+          </div>
+          <div class="container__recipe-content">
+            <h2 class="recipe-title">{{ food.name }}</h2>
+            <div class="container__small-tags">
+              <div *ngIf="food.tags.quick" class="small-tag quick">
+                <span>Quick</span>
+              </div>
+              <div *ngIf="food.tags.easy" class="small-tag easy">
+                <span>Easy</span>
+              </div>
+              <div
+                *ngIf="food.tags.temperature.value"
+                class="small-tag temperature"
+              >
+                <span>Temperature</span>
+              </div>
+              <div *ngIf="food.tags.lesswash" class="small-tag lesswash">
+                <span>Less wash</span>
+              </div>
+              <div *ngIf="food.tags.cheap" class="small-tag cheap">
+                <span>Cheap</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </ng-container>
 
     <!-- Drinks -->
     <ng-container
@@ -89,7 +97,7 @@
         <div class="container__recipe">
           <div class="container__recipe-img">
             <img
-              src="{{ getImageUrl() }}"
+              src="{{ getImageUrl(drink) }}"
               alt="{{ drink.name }}."
               class="recipe-img"
             />
@@ -113,6 +121,47 @@
                 <span>Less wash</span>
               </div>
               <div *ngIf="drink.tags.cheap" class="small-tag cheap">
+                <span>Cheap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </ng-container>
+
+    <!-- Desserts -->
+    <ng-container
+      *ngFor="let dessert of Recipes.desserts"
+      class="container__drinks"
+    >
+      <a routerLink="/recipe" class="link">
+        <div class="container__recipe">
+          <div class="container__recipe-img">
+            <img
+              src="{{ getImageUrl(dessert) }}"
+              alt="{{ dessert.name }}."
+              class="recipe-img"
+            />
+          </div>
+          <div class="container__recipe-content">
+            <h2 class="recipe-title">{{ dessert.name }}</h2>
+            <div class="container__small-tags">
+              <div *ngIf="dessert.tags.quick" class="small-tag quick">
+                <span>Quick</span>
+              </div>
+              <div *ngIf="dessert.tags.easy" class="small-tag easy">
+                <span>Easy</span>
+              </div>
+              <div
+                *ngIf="dessert.tags.temperature.value"
+                class="small-tag temperature"
+              >
+                <span>Temperature</span>
+              </div>
+              <div *ngIf="dessert.tags.lesswash" class="small-tag lesswash">
+                <span>Less wash</span>
+              </div>
+              <div *ngIf="dessert.tags.cheap" class="small-tag cheap">
                 <span>Cheap</span>
               </div>
             </div>
