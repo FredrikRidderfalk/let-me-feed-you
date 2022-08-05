@@ -7,25 +7,29 @@
       <div class="container__recipe-intro__text">
         <h1 class="large-title">Recipe</h1>
         <h2 class="title">
-          {{ CrackNoodles.name }} <span *ngIf="CrackNoodles.star">⭐️</span>
+          {{ RecipeTemplate.foods[1].name }}
+          <span *ngIf="RecipeTemplate.foods[1].star">⭐️</span>
+          <span>{{ index }}</span>
         </h2>
-        <p class="description-text">{{ CrackNoodles.description }}</p>
+        <p class="description-text">
+          {{ RecipeTemplate.foods[1].description }}
+        </p>
       </div>
       <div class="container__tags">
-        <app-quick *ngIf="CrackNoodles.tags.quick"></app-quick>
-        <app-easy *ngIf="CrackNoodles.tags.easy"></app-easy>
+        <app-quick *ngIf="RecipeTemplate.foods[1].tags.quick"></app-quick>
+        <app-easy *ngIf="RecipeTemplate.foods[1].tags.easy"></app-easy>
         <app-temperature
-          *ngIf="CrackNoodles.tags.temperature.value"
+          *ngIf="RecipeTemplate.foods[1].tags.temperature.value"
         ></app-temperature>
-        <app-wash *ngIf="CrackNoodles.tags.lesswash"></app-wash>
-        <app-cheap *ngIf="CrackNoodles.tags.cheap"></app-cheap>
+        <app-wash *ngIf="RecipeTemplate.foods[1].tags.lesswash"></app-wash>
+        <app-cheap *ngIf="RecipeTemplate.foods[1].tags.cheap"></app-cheap>
       </div>
     </div>
 
     <div class="container__recipe-img">
       <img
         src="{{ getImageUrl() }}"
-        alt="{{ CrackNoodles.name }}."
+        alt="{{ RecipeTemplate.foods[1].name }}."
         class="recipe-img"
       />
     </div>
@@ -36,7 +40,7 @@
       <h2 class="ingredients__title">Ingredients</h2>
       <ul class="ingredient-list">
         <li
-          *ngFor="let ingredient of CrackNoodles.ingredients"
+          *ngFor="let ingredient of RecipeTemplate.foods[1].ingredients"
           class="ingredient"
         >
           {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
@@ -49,7 +53,10 @@
         Flex <span class="material-symbols-outlined">help</span>
       </h2>
       <ul class="flex-list">
-        <li *ngFor="let flexItem of CrackNoodles.flex" class="flex-item">
+        <li
+          *ngFor="let flexItem of RecipeTemplate.foods[1].flex"
+          class="flex-item"
+        >
           <strong>{{ flexItem.ingredient }}</strong>
           {{ flexItem.substitutes }}
         </li>
@@ -60,7 +67,10 @@
   <div class="container__instructions">
     <h2 class="instructions__title">Instructions</h2>
     <ul class="instructions">
-      <li *ngFor="let step of CrackNoodles.instructions" class="instruction">
+      <li
+        *ngFor="let step of RecipeTemplate.foods[1].instructions"
+        class="instruction"
+      >
         {{ step }}
       </li>
     </ul>
@@ -68,7 +78,7 @@
 
   <div class="container__notes">
     <h2 class="notes__title">Notes</h2>
-    <p class="notes__text">{{ CrackNoodles.notes }}</p>
+    <p class="notes__text">{{ RecipeTemplate.foods[1].notes }}</p>
   </div>
 
   <img
