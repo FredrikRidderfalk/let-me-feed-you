@@ -20,7 +20,9 @@ import { TemperatureComponent } from './components/tags/temperature/temperature.
 import { HttpClientModule } from "@angular/common/http";
 import { OkonomiyakiComponent } from './pages/recipes/foods/okonomiyaki/okonomiyaki.component';
 import { BurgersComponent } from './pages/recipes/foods/burgers/burgers.component';
-import { HotteokComponent } from './pages/recipes/foods/hotteok/hotteok.component'
+import { HotteokComponent } from './pages/recipes/foods/hotteok/hotteok.component';
+import { CrackNoodlesComponent } from './pages/recipes/foods/crack-noodles/crack-noodles.component';
+import { CausaComponent } from './pages/recipes/foods/causa/causa.component'
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { HotteokComponent } from './pages/recipes/foods/hotteok/hotteok.componen
     TemperatureComponent,
     OkonomiyakiComponent,
     BurgersComponent,
-    HotteokComponent
+    HotteokComponent,
+    CrackNoodlesComponent,
+    CausaComponent
   ],
   imports: [
     BrowserModule,
