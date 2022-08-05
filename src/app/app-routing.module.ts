@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: "recipes", component: RecipesComponent },
   { path: "recipe", component: RecipeComponent },
   { path: "recipes/okonomiyaki", component: OkonomiyakiComponent },
+  // { path: "recipes/hotteok", component: HotteokComponent },
   { path: "recipes/burgers", component: BurgersComponent },
   { path: "academy", component: AcademyComponent },
   { path: "stories", component: StoriesComponent },
