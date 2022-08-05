@@ -9,7 +9,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { RecipesComponent } from './pages/recipes/recipes.component';
 import { AcademyComponent } from './pages/academy/academy.component';
 import { StoriesComponent } from './pages/stories/stories.component';
-import { RecipeComponent } from './components/recipe/recipe.component';
 import { GuideComponent } from './components/guide/guide.component';
 import { MobileNavbarComponent } from './components/mobile-navbar/mobile-navbar.component';
 import { CheapComponent } from './components/tags/cheap/cheap.component';
@@ -32,7 +31,6 @@ import { HotteokComponent } from './pages/recipes/foods/hotteok/hotteok.componen
     RecipesComponent,
     AcademyComponent,
     StoriesComponent,
-    RecipeComponent,
     GuideComponent,
     MobileNavbarComponent,
     CheapComponent,
