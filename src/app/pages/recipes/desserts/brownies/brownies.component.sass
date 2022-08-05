@@ -1,0 +1,195 @@
+@use "../../../../abstracts" as *
+
+// General
+main
+    margin-block: rem(30) rem(70)
+    position: relative
+    overflow-x: clip
+h1
+    font-size: rem(80)
+h2
+    font-size: rem(30)
+    font-weight: 600
+h1, h2, p, li, .material-symbols-outlined
+    color: $lmfy-lightgray
+strong
+    color: $lmfy-darkgray
+    font-weight: 600
+.container__recipe-intro__text, .container__tags, .container__ingredients-flex, .container__instructions, .container__notes
+    padding-inline: rem(20)
+
+// Decor images
+.decor-img
+    width: 250px
+    opacity: 0.06
+    position: absolute
+    z-index: -1
+.chopsticks
+    width: 70%
+    top: -70px
+    right: 0
+.garlic
+    top: 1300px
+    left: -80px
+.lime
+    top: 1200px
+    right: -130px
+    opacity: 0.04
+.sugarbeet
+    bottom: -170px
+    right: 0
+    opacity: 0.04
+
+// Recipe intro
+.container__recipe-intro__text
+    max-width: 450px
+.title
+    font-size: rem(28)
+    margin-top: rem(40)
+.description-text
+    margin-top: rem(20)
+.container__tags
+    display: flex
+    flex-wrap: wrap
+    margin-top: rem(20)
+.container__text-tags
+    @include flex-space-between
+    flex-direction: column
+
+// Recipe image
+.container__recipe-img
+    margin-top: rem(20)
+.recipe-img
+    display: block
+    width: 100%
+
+// Ingredients-flex
+.ingredients__title, .flex__title
+    margin-top: rem(40)
+.ingredient-list, .flex-list
+    margin-top: rem(26)
+.ingredient-list
+    padding-left: 32px
+.ingredient
+    list-style-type: katakana-iroha
+    line-height: 2
+
+// Instructions
+.container__instructions
+    margin-top: rem(20)
+
+// Notes
+.container__notes
+    margin-top: rem(20)
+.notes__title
+    font-size: rem(24)
+
+// Media queries
+@media screen and (min-width: 768px)
+    // General
+    main
+        padding-inline: rem(30)
+        margin-inline: auto
+        max-width: 1120px
+    h1
+        font-size: rem(120)
+    .container__ingredients-flex, .container__instructions, .container__notes
+        padding-inline: 0
+    .garlic
+        width: 350px
+        top: 1100px
+        left: -100px
+    .lime
+        width: 320px
+        top: 900px
+        right: -160px
+    .sugarbeet
+        width: 350px
+        bottom: -240px
+    // Hero
+    .container__recipe-intro
+        display: flex
+        flex-direction: row-reverse
+        justify-content: flex-end
+        width: 100%
+    .container__recipe-img
+        object-fit: fill
+        margin-top: 0
+    .recipe-img
+        width: 100%
+        object-fit: fill
+    .container__text-tags
+        width: 100%
+        padding: rem(30) // remove if wanting to align with edges of image
+
+    // Ingredients-flex
+    .container__ingredients-flex
+        display: flex
+        position: relative
+        margin-top: rem(30)
+        &::before
+            content: ""
+            bottom: -80px
+            left: 50%
+            transform: translateX(-50%)
+            position: absolute
+            width: 100%
+            height: 1px
+            background-color: rgba(0, 0, 0, 0.15)
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
+    .container__ingredients, .container__flex
+        width: 50%
+    .container__ingredients
+        position: relative
+        &::before
+            content: ""
+            top: 55%
+            right: 30px
+            transform: translateY(-50%)
+            position: absolute
+            width: 1px
+            height: 90%
+            background-color: rgba(0, 0, 0, 0.15)
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
+    .flex-item
+        position: relative
+        &:nth-child(n+2)
+            margin-top: rem(60)
+        &:not(:last-child)::before
+            content: ""
+            bottom: rem(-30)
+            left: 50%
+            transform: translateX(-50%)
+            position: absolute
+            width: 50%
+            height: 1px
+            background-color: rgba(0, 0, 0, 0.15)
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
+
+    // Instructions
+    .container__instructions
+        margin-top: rem(150)
+    .instructions
+        margin-top: rem(26)
+        font-size: rem(16)
+    // Notes
+    .notes__title
+        margin-top: rem(50)
+    .notes__text
+        margin-top: rem(10)
+
+@media screen and (min-width: 1100px)
+    main
+        overflow-x: visible
+    .chopsticks
+        right: 0
+    .lime
+        right: 0
+@media screen and (min-width: 1366px)
+    .ingredient, .instructions, .notes__text, .flex-item, .description-text
+        font-size: rem(20)
+    .container__tags
+        display: flex
+        // flex-wrap: nowrap
+    .chopsticks
+        right: -100px

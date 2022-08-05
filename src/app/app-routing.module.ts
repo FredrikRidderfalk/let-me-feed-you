@@ -9,6 +9,12 @@ import { BurgersComponent } from './pages/recipes/foods/burgers/burgers.componen
 import { HotteokComponent } from './pages/recipes/foods/hotteok/hotteok.component';
 import { CrackNoodlesComponent } from './pages/recipes/foods/crack-noodles/crack-noodles.component';
 import { CausaComponent } from './pages/recipes/foods/causa/causa.component';
+import { SmokingMaryComponent } from './pages/recipes/drinks/smoking-mary/smoking-mary.component';
+import { YuzuGenieComponent } from './pages/recipes/drinks/yuzu-genie/yuzu-genie.component';
+import { TyrkiskPeberSnapsComponent } from './pages/recipes/drinks/tyrkisk-peber-snaps/tyrkisk-peber-snaps.component';
+import { BrowniesComponent } from './pages/recipes/desserts/brownies/brownies.component';
+import { BerryPieComponent } from './pages/recipes/desserts/berry-pie/berry-pie.component';
+import { FlamingBananasComponent } from './pages/recipes/desserts/flaming-bananas/flaming-bananas.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -21,6 +27,14 @@ const routes: Routes = [
   { path: "recipes/burgers", component: BurgersComponent },
   { path: "recipes/crack-noodles", component: CrackNoodlesComponent },
   { path: "recipes/causa", component: CausaComponent },
+
+  { path: "recipes/smoking-mary", component: SmokingMaryComponent },
+  { path: "recipes/yuzu-genie", component: YuzuGenieComponent },
+  { path: "recipes/tyrkisk-peber-snaps", component: TyrkiskPeberSnapsComponent },
+
+  { path: "recipes/brownies", component: BrowniesComponent },
+  { path: "recipes/berry-pie", component: BerryPieComponent },
+  { path: "recipes/flaming-bananas", component: FlamingBananasComponent },
 
 ];
 

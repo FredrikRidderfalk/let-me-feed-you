@@ -1,1 +1,97 @@
-<p>yuzu-genie works!</p>
+<app-mobile-navbar *ngIf="isMobile" id="navbar"></app-mobile-navbar>
+<app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
+
+<main>
+  <div class="container__recipe-intro">
+    <div class="container__text-tags">
+      <div class="container__recipe-intro__text">
+        <h1 class="large-title">Recipe</h1>
+        <h2 class="title">
+          {{ AllRecipes.drinks[i].name }}
+          <span *ngIf="AllRecipes.drinks[i].star">⭐️</span>
+        </h2>
+        <p class="description-text">
+          {{ AllRecipes.drinks[i].description }}
+        </p>
+      </div>
+      <div class="container__tags">
+        <app-quick *ngIf="AllRecipes.drinks[i].tags.quick"></app-quick>
+        <app-easy *ngIf="AllRecipes.drinks[i].tags.easy"></app-easy>
+        <app-temperature
+          *ngIf="AllRecipes.drinks[i].tags.temperature.value"
+        ></app-temperature>
+        <app-wash *ngIf="AllRecipes.drinks[i].tags.lesswash"></app-wash>
+        <app-cheap *ngIf="AllRecipes.drinks[i].tags.cheap"></app-cheap>
+      </div>
+    </div>
+
+    <div class="container__recipe-img">
+      <img
+        src="{{ getImageUrl() }}"
+        alt="{{ AllRecipes.drinks[i].name }}."
+        class="recipe-img"
+      />
+    </div>
+  </div>
+
+  <div class="container__ingredients-flex">
+    <div class="container__ingredients">
+      <h2 class="ingredients__title">Ingredients</h2>
+      <ul class="ingredient-list">
+        <li
+          *ngFor="let ingredient of AllRecipes.drinks[i].ingredients"
+          class="ingredient"
+        >
+          {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="container__flex">
+      <h2 class="flex__title">
+        Flex <span class="material-symbols-outlined">help</span>
+      </h2>
+      <ul class="flex-list">
+        <li
+          *ngFor="let flexItem of AllRecipes.drinks[i].flex"
+          class="flex-item"
+        >
+          <strong>{{ flexItem.ingredient }}</strong>
+          {{ flexItem.substitutes }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container__instructions">
+    <h2 class="instructions__title">Instructions</h2>
+    <ul class="instructions">
+      <li
+        *ngFor="let step of AllRecipes.drinks[i].instructions"
+        class="instruction"
+      >
+        {{ step }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="container__notes">
+    <h2 class="notes__title">Notes</h2>
+    <p class="notes__text">{{ AllRecipes.drinks[i].notes }}</p>
+  </div>
+
+  <img
+    src="/assets/chopsticks.png"
+    alt="Chopsticks."
+    class="decor-img chopsticks"
+  />
+  <img src="/assets/garlic.png" alt="Garlic." class="decor-img garlic" />
+  <img src="/assets/lime.png" alt="Lime." class="decor-img lime" />
+  <img
+    src="/assets/sugarbeet.png"
+    alt="Sugarbeet."
+    class="decor-img sugarbeet"
+  />
+</main>
+
+<app-footer id="footer"></app-footer>
