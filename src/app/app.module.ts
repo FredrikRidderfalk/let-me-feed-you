@@ -22,7 +22,13 @@ import { OkonomiyakiComponent } from './pages/recipes/foods/okonomiyaki/okonomiy
 import { BurgersComponent } from './pages/recipes/foods/burgers/burgers.component';
 import { HotteokComponent } from './pages/recipes/foods/hotteok/hotteok.component';
 import { CrackNoodlesComponent } from './pages/recipes/foods/crack-noodles/crack-noodles.component';
-import { CausaComponent } from './pages/recipes/foods/causa/causa.component'
+import { CausaComponent } from './pages/recipes/foods/causa/causa.component';
+import { SmokingMaryComponent } from './pages/recipes/drinks/smoking-mary/smoking-mary.component';
+import { YuzuGenieComponent } from './pages/recipes/drinks/yuzu-genie/yuzu-genie.component';
+import { TyrkiskPeberSnapsComponent } from './pages/recipes/drinks/tyrkisk-peber-snaps/tyrkisk-peber-snaps.component';
+import { BrowniesComponent } from './pages/recipes/desserts/brownies/brownies.component';
+import { BerryPieComponent } from './pages/recipes/desserts/berry-pie/berry-pie.component';
+import { FlamingBananasComponent } from './pages/recipes/desserts/flaming-bananas/flaming-bananas.component'
 
 @NgModule({
   declarations: [
@@ -44,7 +50,13 @@ import { CausaComponent } from './pages/recipes/foods/causa/causa.component'
     BurgersComponent,
     HotteokComponent,
     CrackNoodlesComponent,
-    CausaComponent
+    CausaComponent,
+    SmokingMaryComponent,
+    YuzuGenieComponent,
+    TyrkiskPeberSnapsComponent,
+    BrowniesComponent,
+    BerryPieComponent,
+    FlamingBananasComponent
   ],
   imports: [
     BrowserModule,

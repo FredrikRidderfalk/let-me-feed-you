@@ -488,7 +488,7 @@
     ],
     "drinks": [
         {
-            "name": "Smoke 'n Mary",
+            "name": "Smoking Mary",
             "star": true,
             "description": "These garlic noodles are so incredibly quick, easy, and tasty, combining a few Western and Asian ingredients to make one very flavorful bowl of deliciousness.",
             "tags": {
@@ -682,7 +682,7 @@
             "notes": "MSG is amazing in this dish."
         },
         {
-            "name": "Turkish Pepper Snaps",
+            "name": "Tyrkisk Peber Snaps",
             "star": true,
             "description": "These garlic noodles are so incredibly quick, easy, and tasty, combining a few Western and Asian ingredients to make one very flavorful bowl of deliciousness.",
             "tags": {
