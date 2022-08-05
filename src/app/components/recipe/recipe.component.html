@@ -6,27 +6,28 @@
     <div class="container__text-tags">
       <div class="container__recipe-intro__text">
         <h1 class="large-title">Recipe</h1>
-        <!-- <h2 class="title">{{ CrackNoodles.name.toLowerCase() }}.</h2> -->
+        <!-- <h2 class="title">{{ AllRecipes.foods[i].name.toLowerCase() }}.</h2> -->
         <h2 class="title">
-          {{ CrackNoodles.name }} <span *ngIf="CrackNoodles.star">⭐️</span>
+          {{ AllRecipes.foods[i].name }}
+          <span *ngIf="AllRecipes.foods[i].star">⭐️</span>
         </h2>
-        <p class="description-text">{{ CrackNoodles.description }}</p>
+        <p class="description-text">{{ AllRecipes.foods[i].description }}</p>
       </div>
       <div class="container__tags">
-        <app-quick *ngIf="CrackNoodles.tags.quick"></app-quick>
-        <app-easy *ngIf="CrackNoodles.tags.easy"></app-easy>
+        <app-quick *ngIf="AllRecipes.foods[i].tags.quick"></app-quick>
+        <app-easy *ngIf="AllRecipes.foods[i].tags.easy"></app-easy>
         <app-temperature
-          *ngIf="CrackNoodles.tags.temperature.value"
+          *ngIf="AllRecipes.foods[i].tags.temperature.value"
         ></app-temperature>
-        <app-wash *ngIf="CrackNoodles.tags.lesswash"></app-wash>
-        <app-cheap *ngIf="CrackNoodles.tags.cheap"></app-cheap>
+        <app-wash *ngIf="AllRecipes.foods[i].tags.lesswash"></app-wash>
+        <app-cheap *ngIf="AllRecipes.foods[i].tags.cheap"></app-cheap>
       </div>
     </div>
 
     <div class="container__recipe-img">
       <img
         src="{{ getImageUrl() }}"
-        alt="{{ CrackNoodles.name }}."
+        alt="{{ AllRecipes.foods[i].name }}."
         class="recipe-img"
       />
     </div>
@@ -37,7 +38,7 @@
       <h2 class="ingredients__title">Ingredients</h2>
       <ul class="ingredient-list">
         <li
-          *ngFor="let ingredient of CrackNoodles.ingredients"
+          *ngFor="let ingredient of AllRecipes.foods[i].ingredients"
           class="ingredient"
         >
           {{ ingredient.name }}, {{ ingredient.amount }} {{ ingredient.unit }}
@@ -50,7 +51,7 @@
         Flex <span class="material-symbols-outlined">help</span>
       </h2>
       <ul class="flex-list">
-        <li *ngFor="let flexItem of CrackNoodles.flex" class="flex-item">
+        <li *ngFor="let flexItem of AllRecipes.foods[i].flex" class="flex-item">
           <strong>{{ flexItem.ingredient }}</strong>
           {{ flexItem.substitutes }}
         </li>
@@ -61,7 +62,10 @@
   <div class="container__instructions">
     <h2 class="instructions__title">Instructions</h2>
     <ul class="instructions">
-      <li *ngFor="let step of CrackNoodles.instructions" class="instruction">
+      <li
+        *ngFor="let step of AllRecipes.foods[i].instructions"
+        class="instruction"
+      >
         {{ step }}
       </li>
     </ul>
@@ -69,7 +73,7 @@
 
   <div class="container__notes">
     <h2 class="notes__title">Notes</h2>
-    <p class="notes__text">{{ CrackNoodles.notes }}</p>
+    <p class="notes__text">{{ AllRecipes.foods[i].notes }}</p>
   </div>
 
   <img
