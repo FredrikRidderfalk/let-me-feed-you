@@ -15,7 +15,10 @@
 
   <div class="recipes">
     <!-- Foods -->
-    <ng-container *ngFor="let food of Recipes.foods" class="container__foods">
+    <ng-container
+      *ngFor="let food of AllRecipes.foods"
+      class="container__foods"
+    >
       <a routerLink="{{ getRecipeEndpoint(food.name) }}" class="link">
         <div class="container__recipe">
           <div class="container__recipe-img">
@@ -56,7 +59,7 @@
 
     <!-- Drinks -->
     <ng-container
-      *ngFor="let drink of Recipes.drinks"
+      *ngFor="let drink of AllRecipes.drinks"
       class="container__drinks"
     >
       <a routerLink="{{ getRecipeEndpoint(drink.name) }}" class="link">
@@ -99,7 +102,7 @@
 
     <!-- Desserts -->
     <ng-container
-      *ngFor="let dessert of Recipes.desserts"
+      *ngFor="let dessert of AllRecipes.desserts"
       class="container__desserts"
     >
       <a routerLink="{{ getRecipeEndpoint(dessert.name) }}" class="link">
