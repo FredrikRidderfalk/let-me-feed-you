@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Recipes } from 'src/app/models/models';
-import RecipeTemplate from "../../../../../assets/recipes/recipes.json"
+import AllRecipes from "../../../../../assets/recipes/recipes.json"
 
 @Component({
   selector: 'app-okonomiyaki',
@@ -10,12 +10,12 @@ import RecipeTemplate from "../../../../../assets/recipes/recipes.json"
 export class OkonomiyakiComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
-  RecipeTemplate: Recipes = RecipeTemplate
+  AllRecipes: Recipes = AllRecipes
   indexOfRecipe!: any;
   recipe: Number = this.indexOfRecipe
 
   ///////////
-  array = RecipeTemplate.foods
+  array = AllRecipes.foods
 
   index = this.array.findIndex(object => {
     return object.name === "Hotteok"
@@ -23,11 +23,11 @@ export class OkonomiyakiComponent implements OnInit {
   ///////////
 
   // getRecipeIndex() {
-  //   this.indexOfRecipe = RecipeTemplate.foods.indexOf("Okonomiyaki")
+  //   this.indexOfRecipe = AllRecipes.foods.indexOf("Okonomiyaki")
   // }
 
   getImageUrl() {
-    const imageName = RecipeTemplate.foods[1].name.toLowerCase().replace(/ /g, '')
+    const imageName = AllRecipes.foods[1].name.toLowerCase().replace(/ /g, '')
     return `/assets/photos/${imageName}.jpg`
   }
 
