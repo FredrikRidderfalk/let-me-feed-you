@@ -1,8 +1,9 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Recipe, Recipes } from 'src/app/models/models';
-import CrackNoodles from "../../../assets/recipes/crack-noodles.json"
 import RecipesDB from "../../../assets/recipes/recipes.json"
 import { ApiService } from "../../services/api.service"
+import CrackNoodles from "../../../assets/recipes/crack-noodles.json"
+import AllRecipes from "../../../assets/recipes/recipes.json"
 
 @Component({
   selector: 'app-recipes',
@@ -18,6 +19,11 @@ export class RecipesComponent implements OnInit {
   getImageUrl(foodType: { name: string; }) {
     const imageName = foodType.name.toLowerCase().replace(/ /g, '')
     return `/assets/photos/${imageName}.jpg`
+  }
+
+  getRecipeEndpoint(recipeName: string) {
+    recipeName = recipeName.toLowerCase().replace(/ /g, '-')
+    return `/recipes/${recipeName}`
   }
 
   @HostListener('window:resize', ['$event'])

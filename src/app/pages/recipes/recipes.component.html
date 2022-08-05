@@ -13,46 +13,10 @@
     <button id="desserts-btn" class="desserts-button">Desserts</button>
   </div>
 
-  <!-- Foods -->
   <div class="recipes">
-    <!-- <a routerLink="/recipe" class="link">
-      <div class="container__recipe">
-        <div class="container__recipe-img">
-          <img
-            src="{{ getImageUrl() }}"
-            alt="{{ CrackNoodles.name }}."
-            class="recipe-img"
-          />
-        </div>
-        <div class="container__recipe-content">
-          <h2 class="recipe-title">{{ CrackNoodles.name }}</h2>
-          <div class="container__small-tags">
-            <div *ngIf="CrackNoodles.tags.quick" class="small-tag quick">
-              <span>Quick</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.easy" class="small-tag easy">
-              <span>Easy</span>
-            </div>
-            <div
-              *ngIf="CrackNoodles.tags.temperature.value"
-              class="small-tag temperature"
-            >
-              <span>Temperature</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.lesswash" class="small-tag lesswash">
-              <span>Less wash</span>
-            </div>
-            <div *ngIf="CrackNoodles.tags.cheap" class="small-tag cheap">
-              <span>Cheap</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a> -->
-
     <!-- Foods -->
-    <ng-container *ngFor="let food of Recipes.foods" class="container__drinks">
-      <a routerLink="/recipe" class="link">
+    <ng-container *ngFor="let food of Recipes.foods" class="container__foods">
+      <a routerLink="{{ getRecipeEndpoint(food.name) }}" class="link">
         <div class="container__recipe">
           <div class="container__recipe-img">
             <img
@@ -95,7 +59,7 @@
       *ngFor="let drink of Recipes.drinks"
       class="container__drinks"
     >
-      <a routerLink="/recipe" class="link">
+      <a routerLink="{{ getRecipeEndpoint(drink.name) }}" class="link">
         <div class="container__recipe">
           <div class="container__recipe-img">
             <img
@@ -136,9 +100,9 @@
     <!-- Desserts -->
     <ng-container
       *ngFor="let dessert of Recipes.desserts"
-      class="container__drinks"
+      class="container__desserts"
     >
-      <a routerLink="/recipe" class="link">
+      <a routerLink="{{ getRecipeEndpoint(dessert.name) }}" class="link">
         <div class="container__recipe">
           <div class="container__recipe-img">
             <img
