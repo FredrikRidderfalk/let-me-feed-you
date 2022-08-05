@@ -19,7 +19,7 @@ export class BurgersComponent implements OnInit {
   })
 
   getImageUrl() {
-    const imageName = AllRecipes.foods[1].name.toLowerCase().replace(/ /g, '')
+    const imageName = AllRecipes.foods[this.i].name.toLowerCase().replace(/ /g, '')
     return `/assets/photos/${imageName}.jpg`
   }
 
