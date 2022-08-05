@@ -11,20 +11,12 @@ export class OkonomiyakiComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
   AllRecipes: Recipes = AllRecipes
-  indexOfRecipe!: any;
-  recipe: Number = this.indexOfRecipe
 
-  ///////////
-  array = AllRecipes.foods
+  recipeName: string = "Okonomiyaki" // Update this when creating a new recipe
 
-  index = this.array.findIndex(object => {
-    return object.name === "Hotteok"
+  i: number = this.AllRecipes.foods.findIndex(recipe => {
+    return recipe.name === this.recipeName
   })
-  ///////////
-
-  // getRecipeIndex() {
-  //   this.indexOfRecipe = AllRecipes.foods.indexOf("Okonomiyaki")
-  // }
 
   getImageUrl() {
     const imageName = AllRecipes.foods[1].name.toLowerCase().replace(/ /g, '')
