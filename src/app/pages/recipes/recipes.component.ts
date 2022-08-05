@@ -12,6 +12,10 @@ export class RecipesComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
   AllRecipes: Recipes = AllRecipes
+  foodsBtnIsActive: boolean = false
+  drinksBtnIsActive: boolean = false
+  dessertsBtnIsActive: boolean = false
+  noFilter: boolean = true
 
   getImageUrl(foodType: { name: string; }) {
     const imageName = foodType.name.toLowerCase().replace(/ /g, '')
@@ -21,6 +25,31 @@ export class RecipesComponent implements OnInit {
   getRecipeEndpoint(recipeName: string) {
     recipeName = recipeName.toLowerCase().replace(/ /g, '-')
     return `/recipes/${recipeName}`
+  }
+
+  toggleRecipeFilter(category: string) {
+    if(category === "foods") {
+      this.foodsBtnIsActive ? this.foodsBtnIsActive = false : this.foodsBtnIsActive = true
+      // this.foodsBtnIsActive = true
+      this.drinksBtnIsActive = false
+      this.dessertsBtnIsActive = false
+      this.noFilter = true
+    }
+    if(category === "drinks") {
+      this.drinksBtnIsActive = true
+      this.foodsBtnIsActive = false
+      this.dessertsBtnIsActive = false
+      this.noFilter = true
+    }
+    if(category === "desserts") {
+      this.dessertsBtnIsActive = true
+      this.drinksBtnIsActive = false
+      this.foodsBtnIsActive = false
+      this.noFilter = true
+    }
+    // if(!this.foodsBtnIsActive && !this.drinksBtnIsActive && !this.dessertsBtnIsActive) {
+    //   this.noFilter = true
+    // }
   }
 
   @HostListener('window:resize', ['$event'])
@@ -38,7 +67,7 @@ export class RecipesComponent implements OnInit {
     }
   }
 
-  recipes: any
+  // recipes: any
 
   constructor(private service: ApiService) { }
 

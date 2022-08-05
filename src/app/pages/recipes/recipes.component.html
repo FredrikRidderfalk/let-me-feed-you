@@ -8,9 +8,30 @@
   </div>
 
   <div class="container__filter-buttons">
-    <button id="foods-btn" class="foods-button active">Foods</button>
-    <button id="drinks-btn" class="drinks-button">Drinks</button>
-    <button id="desserts-btn" class="desserts-button">Desserts</button>
+    <button
+      id="foods-btn"
+      class="foods-button"
+      [class.active]="foodsBtnIsActive"
+      (click)="toggleRecipeFilter('foods')"
+    >
+      Foods
+    </button>
+    <button
+      id="drinks-btn"
+      class="drinks-button"
+      [class.active]="drinksBtnIsActive"
+      (click)="toggleRecipeFilter('drinks')"
+    >
+      Drinks
+    </button>
+    <button
+      id="desserts-btn"
+      class="desserts-button"
+      [class.active]="dessertsBtnIsActive"
+      (click)="toggleRecipeFilter('desserts')"
+    >
+      Desserts
+    </button>
   </div>
 
   <div class="recipes">
