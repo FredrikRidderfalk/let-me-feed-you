@@ -40,7 +40,11 @@
       *ngFor="let food of AllRecipes.foods"
       class="container__foods"
     >
-      <a routerLink="{{ getRecipeEndpoint(food.name) }}" class="link">
+      <a
+        routerLink="{{ getRecipeEndpoint(food.name) }}"
+        class="link"
+        [hidden]="!foodsBtnIsActive"
+      >
         <div class="container__recipe">
           <div class="container__recipe-img">
             <img
@@ -83,7 +87,11 @@
       *ngFor="let drink of AllRecipes.drinks"
       class="container__drinks"
     >
-      <a routerLink="{{ getRecipeEndpoint(drink.name) }}" class="link">
+      <a
+        routerLink="{{ getRecipeEndpoint(drink.name) }}"
+        class="link"
+        [hidden]="!drinksBtnIsActive"
+      >
         <div class="container__recipe">
           <div class="container__recipe-img">
             <img
@@ -126,7 +134,11 @@
       *ngFor="let dessert of AllRecipes.desserts"
       class="container__desserts"
     >
-      <a routerLink="{{ getRecipeEndpoint(dessert.name) }}" class="link">
+      <a
+        routerLink="{{ getRecipeEndpoint(dessert.name) }}"
+        class="link"
+        [hidden]="!dessertsBtnIsActive"
+      >
         <div class="container__recipe">
           <div class="container__recipe-img">
             <img

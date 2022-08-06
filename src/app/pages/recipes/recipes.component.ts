@@ -12,10 +12,9 @@ export class RecipesComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
   AllRecipes: Recipes = AllRecipes
-  foodsBtnIsActive: boolean = false
+  foodsBtnIsActive: boolean = true
   drinksBtnIsActive: boolean = false
   dessertsBtnIsActive: boolean = false
-  noFilter: boolean = true
 
   getImageUrl(foodType: { name: string; }) {
     const imageName = foodType.name.toLowerCase().replace(/ /g, '')
@@ -32,23 +31,19 @@ export class RecipesComponent implements OnInit {
       this.foodsBtnIsActive = !this.foodsBtnIsActive
       this.drinksBtnIsActive = false
       this.dessertsBtnIsActive = false
-      this.noFilter = true
     }
     if(category === "drinks") {
       this.drinksBtnIsActive = !this.drinksBtnIsActive
       this.foodsBtnIsActive = false
       this.dessertsBtnIsActive = false
-      this.noFilter = true
     }
     if(category === "desserts") {
       this.dessertsBtnIsActive = !this.dessertsBtnIsActive
       this.drinksBtnIsActive = false
       this.foodsBtnIsActive = false
-      this.noFilter = true
     }
-    // if(!this.foodsBtnIsActive && !this.drinksBtnIsActive && !this.dessertsBtnIsActive) {
-    //   this.noFilter = true
-    // }
+    if(!this.foodsBtnIsActive && !this.drinksBtnIsActive && !this.dessertsBtnIsActive) {
+    }
   }
 
   @HostListener('window:resize', ['$event'])
