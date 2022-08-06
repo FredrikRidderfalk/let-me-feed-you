@@ -29,20 +29,19 @@ export class RecipesComponent implements OnInit {
 
   toggleRecipeFilter(category: string) {
     if(category === "foods") {
-      this.foodsBtnIsActive ? this.foodsBtnIsActive = false : this.foodsBtnIsActive = true
-      // this.foodsBtnIsActive = true
+      this.foodsBtnIsActive = !this.foodsBtnIsActive
       this.drinksBtnIsActive = false
       this.dessertsBtnIsActive = false
       this.noFilter = true
     }
     if(category === "drinks") {
-      this.drinksBtnIsActive = true
+      this.drinksBtnIsActive = !this.drinksBtnIsActive
       this.foodsBtnIsActive = false
       this.dessertsBtnIsActive = false
       this.noFilter = true
     }
     if(category === "desserts") {
-      this.dessertsBtnIsActive = true
+      this.dessertsBtnIsActive = !this.dessertsBtnIsActive
       this.drinksBtnIsActive = false
       this.foodsBtnIsActive = false
       this.noFilter = true
