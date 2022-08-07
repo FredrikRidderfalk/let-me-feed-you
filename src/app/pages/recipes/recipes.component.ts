@@ -28,21 +28,22 @@ export class RecipesComponent implements OnInit {
 
   toggleRecipeFilter(category: string) {
     if(category === "foods") {
-      this.foodsBtnIsActive = !this.foodsBtnIsActive
+      // this.foodsBtnIsActive = !this.foodsBtnIsActive
+      this.foodsBtnIsActive = true
       this.drinksBtnIsActive = false
       this.dessertsBtnIsActive = false
     }
     if(category === "drinks") {
-      this.drinksBtnIsActive = !this.drinksBtnIsActive
+      // this.drinksBtnIsActive = !this.drinksBtnIsActive
+      this.drinksBtnIsActive = true
       this.foodsBtnIsActive = false
       this.dessertsBtnIsActive = false
     }
     if(category === "desserts") {
-      this.dessertsBtnIsActive = !this.dessertsBtnIsActive
+      // this.dessertsBtnIsActive = !this.dessertsBtnIsActive
+      this.dessertsBtnIsActive = true
       this.drinksBtnIsActive = false
       this.foodsBtnIsActive = false
-    }
-    if(!this.foodsBtnIsActive && !this.drinksBtnIsActive && !this.dessertsBtnIsActive) {
     }
   }
 
