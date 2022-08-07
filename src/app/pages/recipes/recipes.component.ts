@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Recipe, Recipes } from 'src/app/models/models';
+import { IRecipe, IRecipes } from 'src/app/models/models';
 import { ApiService } from "../../services/api.service"
 import AllRecipes from "../../../assets/recipes/recipes.json"
 
@@ -11,7 +11,7 @@ import AllRecipes from "../../../assets/recipes/recipes.json"
 export class RecipesComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
-  AllRecipes: Recipes = AllRecipes
+  AllRecipes: IRecipes = AllRecipes
   foodsBtnIsActive: boolean = true
   drinksBtnIsActive: boolean = false
   dessertsBtnIsActive: boolean = false

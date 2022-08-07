@@ -1,47 +1,47 @@
 // Guide
-export interface Guide {
+export interface IGuide {
     title: string;
     content: string;
 }
 
 // Recipe
 
-export interface Temperature {
+export interface ITemperature {
     value: string;
     unit: string;
 }
-export interface Tags {
+export interface ITags {
     quick: boolean;
     easy: boolean;
-    temperature: Temperature
+    temperature: ITemperature
     lesswash: boolean;
     cheap: boolean;
 }
 
-export interface Ingredient {
+export interface IIngredient {
     name: string;
     amount: number;
     unit: string;
 }
 
-export interface FlexItem {
+export interface IFlexItem {
     ingredient: string;
     substitutes: string;
 }
 
-export interface Recipe {
+export interface IRecipe {
     name: string;
     star: boolean;
     description: string;
-    tags: Tags;
-    ingredients: Ingredient[];
-    flex: FlexItem[];
+    tags: ITags;
+    ingredients: IIngredient[];
+    flex: IFlexItem[];
     instructions: string[];
     notes: string;
 }
 
-export interface Recipes {
-    foods: Recipe[]
-    desserts: Recipe[]
-    drinks: Recipe[]
+export interface IRecipes {
+    foods: IRecipe[]
+    desserts: IRecipe[]
+    drinks: IRecipe[]
 }

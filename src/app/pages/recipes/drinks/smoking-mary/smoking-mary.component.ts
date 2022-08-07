@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Recipes } from 'src/app/models/models';
+import { IRecipes } from 'src/app/models/models';
 import AllRecipes from "../../../../../assets/recipes/recipes.json"
 
 @Component({
@@ -10,7 +10,7 @@ import AllRecipes from "../../../../../assets/recipes/recipes.json"
 export class SmokingMaryComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
-  AllRecipes: Recipes = AllRecipes
+  AllRecipes: IRecipes = AllRecipes
 
   recipeName: string = "Smoking Mary" // Update this when creating a new recipe
 
