@@ -15,6 +15,8 @@ import { TyrkiskPeberSnapsComponent } from './pages/recipes/drinks/tyrkisk-peber
 import { BrowniesComponent } from './pages/recipes/desserts/brownies/brownies.component';
 import { BerryPieComponent } from './pages/recipes/desserts/berry-pie/berry-pie.component';
 import { FlamingBananasComponent } from './pages/recipes/desserts/flaming-bananas/flaming-bananas.component';
+import { GuideToPlantBasedSubstitutionsComponent } from './pages/academy/guides/guide-to-plant-based-substitutions/guide-to-plant-based-substitutions.component'
+import { GuideToTofuComponent } from './pages/academy/guides/guide-to-tofu/guide-to-tofu.component'
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -35,6 +37,9 @@ const routes: Routes = [
   { path: "recipes/brownies", component: BrowniesComponent },
   { path: "recipes/berry-pie", component: BerryPieComponent },
   { path: "recipes/flaming-bananas", component: FlamingBananasComponent },
+
+  { path: "academy/guide-to-plant-based-substitutions", component: GuideToPlantBasedSubstitutionsComponent },
+  { path: "academy/guide-to-tofu", component: GuideToTofuComponent },
 
 ];
 

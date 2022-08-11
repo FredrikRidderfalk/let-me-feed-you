@@ -1,0 +1,12 @@
+{
+    "guides": [
+        {
+            "title": "I Am Substitution Title",
+            "content": "I am substitutions content."
+        },
+        {
+            "title": "I Am Tofu Title",
+            "content": "I am tofu content."
+        }
+    ]
+}
