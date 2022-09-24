@@ -10,7 +10,7 @@
   <div class="container__filter-buttons">
     <button
       id="foods-btn"
-      class="foods-button"
+      class="filter-button foods-button"
       [class.active]="foodsBtnIsActive"
       (click)="toggleRecipeFilter('foods')"
     >
@@ -18,7 +18,7 @@
     </button>
     <button
       id="drinks-btn"
-      class="drinks-button"
+      class="filter-button drinks-button"
       [class.active]="drinksBtnIsActive"
       (click)="toggleRecipeFilter('drinks')"
     >
@@ -26,7 +26,7 @@
     </button>
     <button
       id="desserts-btn"
-      class="desserts-button"
+      class="filter-button desserts-button"
       [class.active]="dessertsBtnIsActive"
       (click)="toggleRecipeFilter('desserts')"
     >
