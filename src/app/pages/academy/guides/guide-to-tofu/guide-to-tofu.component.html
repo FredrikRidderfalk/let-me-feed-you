@@ -1,1 +1,52 @@
-<p>guide-to-tofu works!</p>
+<app-mobile-navbar *ngIf="isMobile" id="navbar"></app-mobile-navbar>
+<app-navbar *ngIf="!isMobile" id="navbar"></app-navbar>
+
+<main>
+  <div class="container__guide-intro">
+    <div class="container__text">
+      <h1 class="large-title">Guide</h1>
+      <!-- <h2 class="title">
+        {{ AllRecipes.foods[i].name }}
+        <span *ngIf="AllRecipes.foods[i].star">⭐️</span>
+      </h2>
+      <p class="description-text">
+        {{ AllRecipes.foods[i].description }}
+      </p> -->
+    </div>
+
+    <div class="container__guide-img">
+      <!-- <img
+        src="{{ getImageUrl() }}"
+        alt="{{ AllRecipes.foods[i].name }}."
+        class="guide-img"
+      /> -->
+    </div>
+  </div>
+
+  <div class="container__guide">
+    <h2 class="guide__title">Guide</h2>
+    <!-- <ul class="guide">
+      <li
+        *ngFor="let step of AllRecipes.foods[i].instructions"
+        class="instruction"
+      >
+        {{ step }}
+      </li>
+    </ul> -->
+  </div>
+
+  <img
+    src="/assets/chopsticks.png"
+    alt="Chopsticks."
+    class="decor-img chopsticks"
+  />
+  <img src="/assets/garlic.png" alt="Garlic." class="decor-img garlic" />
+  <img src="/assets/lime.png" alt="Lime." class="decor-img lime" />
+  <img
+    src="/assets/sugarbeet.png"
+    alt="Sugarbeet."
+    class="decor-img sugarbeet"
+  />
+</main>
+
+<app-footer id="footer"></app-footer>

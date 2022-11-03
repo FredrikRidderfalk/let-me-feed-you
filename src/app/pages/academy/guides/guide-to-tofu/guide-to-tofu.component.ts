@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./guide-to-tofu.component.sass']
 })
 export class GuideToTofuComponent implements OnInit {
+  isMobile: boolean = false
+  getScreenWidth!: number;
 
   constructor() { }
 
