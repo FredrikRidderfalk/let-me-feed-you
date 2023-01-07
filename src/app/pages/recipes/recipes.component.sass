@@ -78,18 +78,18 @@ main
     margin-inline: auto
 
 // Media queries
-@media screen and (max-width: 767px)
-    .container__recipe::before
-        content: ""
-        bottom: rem(-30)
-        left: 50%
-        transform: translateX(-50%)
-        position: absolute
-        width: 50%
-        height: 2px
-        background-color: rgba(0, 0, 0, 0.15)
-        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25)
-@media screen and (min-width: 768px)
+@media screen and (max-width: 859px)
+    .filter-button
+        display: block
+        width: 100%
+    .filter-button:not(.filter-button:last-child)
+        margin-bottom: rem(10)
+    .link:nth-child(odd)
+        .container__recipe
+            background-color: #f5f5f5
+    .container__recipe
+        margin-block: rem(10)
+@media screen and (min-width: 860px)
     .recipes
         display: flex
         justify-content: flex-start
@@ -99,10 +99,7 @@ main
         margin-inline: rem(10)
     .container__recipe
         border: 2px solid $lmfy-darkgray
-        max-width: 400px
+        width: 400px
         margin-inline: auto
     .link
         margin-block: rem(20)
-@media screen and (min-width: 900px)
-    .container__recipe
-        width: 400px
