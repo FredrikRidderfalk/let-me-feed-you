@@ -30,7 +30,9 @@ import { BrowniesComponent } from './pages/recipes/desserts/brownies/brownies.co
 import { BerryPieComponent } from './pages/recipes/desserts/berry-pie/berry-pie.component';
 import { FlamingBananasComponent } from './pages/recipes/desserts/flaming-bananas/flaming-bananas.component';
 import { GuideToPlantBasedSubstitutionsComponent } from './pages/academy/guides/guide-to-plant-based-substitutions/guide-to-plant-based-substitutions.component';
-import { GuideToTofuComponent } from './pages/academy/guides/guide-to-tofu/guide-to-tofu.component'
+import { GuideToTofuComponent } from './pages/academy/guides/guide-to-tofu/guide-to-tofu.component';
+import { RamenComponent } from './pages/recipes/foods/ramen/ramen.component'
+import { TortillaSoupComponent } from './pages/recipes/foods/tortilla-soup/tortilla-soup.component'
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { GuideToTofuComponent } from './pages/academy/guides/guide-to-tofu/guide
     BerryPieComponent,
     FlamingBananasComponent,
     GuideToPlantBasedSubstitutionsComponent,
-    GuideToTofuComponent
+    GuideToTofuComponent,
+    RamenComponent,
+    TortillaSoupComponent,
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,8 @@ import { BerryPieComponent } from './pages/recipes/desserts/berry-pie/berry-pie.
 import { FlamingBananasComponent } from './pages/recipes/desserts/flaming-bananas/flaming-bananas.component';
 import { GuideToPlantBasedSubstitutionsComponent } from './pages/academy/guides/guide-to-plant-based-substitutions/guide-to-plant-based-substitutions.component'
 import { GuideToTofuComponent } from './pages/academy/guides/guide-to-tofu/guide-to-tofu.component'
+import { RamenComponent } from './pages/recipes/foods/ramen/ramen.component';
+import { TortillaSoupComponent } from './pages/recipes/foods/tortilla-soup/tortilla-soup.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -29,6 +31,8 @@ const routes: Routes = [
   { path: "recipes/burgers", component: BurgersComponent },
   { path: "recipes/crack-noodles", component: CrackNoodlesComponent },
   { path: "recipes/causa", component: CausaComponent },
+  { path: "recipes/ramen", component: RamenComponent },
+  { path: "recipes/tortilla-soup", component: TortillaSoupComponent },
 
   { path: "recipes/smoking-mary", component: SmokingMaryComponent },
   { path: "recipes/yuzu-genie", component: YuzuGenieComponent },
