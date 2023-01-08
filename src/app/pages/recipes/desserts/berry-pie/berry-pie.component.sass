@@ -120,6 +120,7 @@ strong
         object-fit: fill
     .container__text-tags
         width: 100%
+        min-width: fit-content
         padding: rem(30) // remove if wanting to align with edges of image
 
     // Ingredients-flex
@@ -186,6 +187,10 @@ strong
     .lime
         right: 0
 @media screen and (min-width: 1366px)
+    main
+        max-width: 1220px
+    .container__recipe-intro__text
+        max-width: 550px
     .ingredient, .instructions, .notes__text, .flex-item, .description-text
         font-size: rem(20)
     .container__tags
