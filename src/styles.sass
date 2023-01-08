@@ -6,7 +6,7 @@
     margin: 0
     box-sizing: border-box
     font-family: 'Poppins', sans-serif
-    // color: $lmfy-lightgray
+    color: $lmfy-darkgray
 body
     transition: 0.5s
     background-color: $lmfy-white
@@ -14,8 +14,12 @@ body
 body.dark_mode
     transition: 0.5s
     background-color: $lmfy-black
-    & h2
-        color: #f0f !important
+    & h1, h2, h4, p, a, ul, .user-theme__icon
+        color: $lmfy-white !important
+    & div
+        border-color: $lmfy-white !important
+    & footer, .container__navigation
+        background-color: $lmfy-dark
 h1
     font-size: rem(32)
     color: $lmfy-darkgray
