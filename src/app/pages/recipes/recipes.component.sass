@@ -39,7 +39,12 @@ main
     height: 200px
     display: flex
     position: relative
-    padding: rem(8)
+    // padding: rem(8)
+    overflow: hidden
+    transition: 0.2s
+    &:hover
+        transition: 0.2s
+        transform: scale(1.02)
 .link
     margin-block: rem(60)
 .recipe-img
@@ -99,7 +104,9 @@ main
     .link
         margin-inline: rem(10)
     .container__recipe
-        border: 2px solid $lmfy-darkgray
+        // border: 2px solid $lmfy-darkgray
+        background-color: #f2f2f2
+        border-radius: rem(10)
         width: 400px
         margin-inline: auto
     .link

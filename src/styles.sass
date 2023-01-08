@@ -20,10 +20,14 @@ body.dark_mode
         color: $lmfy-dark-mode-flex !important
     & .container__ingredients::before, .container__ingredients-flex::before
         background-color: $lmfy-white !important
-    & div
-        border-color: $lmfy-white !important
+    & .container__recipe
+        background-color: $lmfy-dark !important
+        border-radius: rem(10) !important
+        // border-color: $lmfy-white !important
     & footer, .container__navigation
         background-color: $lmfy-dark !important
+    & .container__user-theme:hover
+        background-color: $lmfy-hover-bg-dark
 h1
     font-size: rem(32)
     color: $lmfy-darkgray
