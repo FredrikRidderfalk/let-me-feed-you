@@ -19,7 +19,7 @@
     // text-decoration-thickness: rem(1.5)
     // text-underline-offset: rem(6)
     padding: rem(3)
-.container__link, .container__logo, .container__notifications
+.container__link, .container__logo
     padding-inline: rem(30)
 .logo
     width: 60px
@@ -31,3 +31,19 @@
 @media screen and (min-width: 768px)
     .container__navbar-content
         max-width: 1120px
+
+// User theme toggle
+.user-theme__icon
+    padding: rem(8)
+    color: $lmfy-black
+
+.container__user-theme
+    cursor: pointer
+    background-color: inherit
+    width: 50px
+    height: 50px
+    margin-right: rem(22)
+    border-radius: 6px
+    &:hover
+        background-color: $lmfy-hover-bg
+        border-radius: 6px

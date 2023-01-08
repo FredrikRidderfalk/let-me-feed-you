@@ -6,10 +6,16 @@
     margin: 0
     box-sizing: border-box
     font-family: 'Poppins', sans-serif
-    color: $lmfy-lightgray
+    // color: $lmfy-lightgray
 body
+    transition: 0.5s
     background-color: $lmfy-white
     min-width: 360px
+body.dark_mode
+    transition: 0.5s
+    background-color: $lmfy-black
+    & h2
+        color: #f0f !important
 h1
     font-size: rem(32)
     color: $lmfy-darkgray

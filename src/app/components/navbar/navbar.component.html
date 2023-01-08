@@ -20,8 +20,10 @@
       </ul>
     </div>
 
-    <div class="container__notifications">
-      <span class="material-symbols-outlined">notifications</span>
+    <div (click)="toggleTheme()" class="container__user-theme">
+      <span class="material-symbols-outlined user-theme__icon">{{
+        userTheme
+      }}</span>
     </div>
   </div>
 </nav>
