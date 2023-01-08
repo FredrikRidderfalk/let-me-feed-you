@@ -20,7 +20,7 @@ export interface ITags {
 
 export interface IIngredient {
     name: string;
-    amount: number;
+    amount: number | null;
     unit: string;
 }
 
