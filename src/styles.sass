@@ -14,12 +14,16 @@ body
 body.dark_mode
     transition: 0.5s
     background-color: $lmfy-black
-    & h1, h2, h4, p, a, ul, .user-theme__icon
+    & h1, h2, h4, p, a, ul, li, .user-theme__icon, .ingredient, .flex-item
         color: $lmfy-white !important
+    & .flex-item > strong, .flex__title > span
+        color: $lmfy-dark-mode-flex !important
+    & .container__ingredients::before, .container__ingredients-flex::before
+        background-color: $lmfy-white !important
     & div
         border-color: $lmfy-white !important
     & footer, .container__navigation
-        background-color: $lmfy-dark
+        background-color: $lmfy-dark !important
 h1
     font-size: rem(32)
     color: $lmfy-darkgray
