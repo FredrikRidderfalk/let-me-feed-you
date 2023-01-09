@@ -19,7 +19,7 @@ import { TemperatureComponent } from './components/tags/temperature/temperature.
 
 import { HttpClientModule } from "@angular/common/http";
 import { OkonomiyakiComponent } from './pages/recipes/foods/okonomiyaki/okonomiyaki.component';
-import { BurgersComponent } from './pages/recipes/foods/burgers/burgers.component';
+import { BeanBurgersComponent } from './pages/recipes/foods/bean-burgers/bean-burgers.component';
 import { HotteokComponent } from './pages/recipes/foods/hotteok/hotteok.component';
 import { CrackNoodlesComponent } from './pages/recipes/foods/crack-noodles/crack-noodles.component';
 import { CausaComponent } from './pages/recipes/foods/causa/causa.component';
@@ -51,7 +51,7 @@ import { TortillaSoupComponent } from './pages/recipes/foods/tortilla-soup/torti
     WashComponent,
     TemperatureComponent,
     OkonomiyakiComponent,
-    BurgersComponent,
+    BeanBurgersComponent,
     HotteokComponent,
     CrackNoodlesComponent,
     CausaComponent,

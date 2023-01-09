@@ -5,7 +5,7 @@ import { RecipesComponent } from './pages/recipes/recipes.component';
 import { AcademyComponent } from './pages/academy/academy.component';
 import { StoriesComponent } from './pages/stories/stories.component';
 import { OkonomiyakiComponent } from './pages/recipes/foods/okonomiyaki/okonomiyaki.component';
-import { BurgersComponent } from './pages/recipes/foods/burgers/burgers.component';
+import { BeanBurgersComponent } from './pages/recipes/foods/bean-burgers/bean-burgers.component';
 import { HotteokComponent } from './pages/recipes/foods/hotteok/hotteok.component';
 import { CrackNoodlesComponent } from './pages/recipes/foods/crack-noodles/crack-noodles.component';
 import { CausaComponent } from './pages/recipes/foods/causa/causa.component';
@@ -28,7 +28,7 @@ const routes: Routes = [
   
   { path: "recipes/okonomiyaki", component: OkonomiyakiComponent },
   { path: "recipes/hotteok", component: HotteokComponent },
-  { path: "recipes/burgers", component: BurgersComponent },
+  { path: "recipes/bean-burgers", component: BeanBurgersComponent },
   { path: "recipes/crack-noodles", component: CrackNoodlesComponent },
   { path: "recipes/causa", component: CausaComponent },
   { path: "recipes/ramen", component: RamenComponent },

@@ -4,15 +4,15 @@ import AllRecipes from "../../../../../assets/recipes/recipes.json"
 
 @Component({
   selector: 'app-burgers',
-  templateUrl: './burgers.component.html',
-  styleUrls: ['./burgers.component.sass']
+  templateUrl: './bean-burgers.component.html',
+  styleUrls: ['./bean-burgers.component.sass']
 })
-export class BurgersComponent implements OnInit {
+export class BeanBurgersComponent implements OnInit {
   isMobile: boolean = false
   getScreenWidth!: number;
   AllRecipes: IRecipes = AllRecipes
 
-  recipeName: string = "Burgers" // Update this when creating a new recipe
+  recipeName: string = "Bean Burgers" // Update this when creating a new recipe
 
   i: number = this.AllRecipes.foods.findIndex(recipe => {
     return recipe.name === this.recipeName
