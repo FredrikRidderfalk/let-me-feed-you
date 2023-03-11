@@ -19,6 +19,7 @@ import { GuideToPlantBasedSubstitutionsComponent } from './pages/academy/guides/
 import { GuideToTofuComponent } from './pages/academy/guides/guide-to-tofu/guide-to-tofu.component'
 import { RamenComponent } from './pages/recipes/foods/ramen/ramen.component';
 import { TortillaSoupComponent } from './pages/recipes/foods/tortilla-soup/tortilla-soup.component';
+import { SilsiPastaComponent } from './pages/recipes/foods/silsi-pasta/silsi-pasta.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: "recipes/causa", component: CausaComponent },
   { path: "recipes/ramen", component: RamenComponent },
   { path: "recipes/tortilla-soup", component: TortillaSoupComponent },
+  { path: "recipes/silsi-pasta", component: SilsiPastaComponent },
 
   { path: "recipes/smoking-mary", component: SmokingMaryComponent },
   { path: "recipes/yuzu-genie", component: YuzuGenieComponent },

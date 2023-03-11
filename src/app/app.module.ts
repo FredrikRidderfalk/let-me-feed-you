@@ -33,6 +33,7 @@ import { GuideToPlantBasedSubstitutionsComponent } from './pages/academy/guides/
 import { GuideToTofuComponent } from './pages/academy/guides/guide-to-tofu/guide-to-tofu.component';
 import { RamenComponent } from './pages/recipes/foods/ramen/ramen.component'
 import { TortillaSoupComponent } from './pages/recipes/foods/tortilla-soup/tortilla-soup.component'
+import { SilsiPastaComponent } from './pages/recipes/foods/silsi-pasta/silsi-pasta.component'
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { TortillaSoupComponent } from './pages/recipes/foods/tortilla-soup/torti
     GuideToTofuComponent,
     RamenComponent,
     TortillaSoupComponent,
+    SilsiPastaComponent,
   ],
   imports: [
     BrowserModule,

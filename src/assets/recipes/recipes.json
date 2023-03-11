@@ -1867,7 +1867,7 @@
         {
             "name": "Silsi Pasta",
             "star": true,
-            "description": "It's soooo gooooood!",
+            "description": "A berbere delight!",
             "tags": {
                     "quick": true,
                     "easy": true,
@@ -1880,7 +1880,7 @@
                 },
             "ingredients": [
                 {
-                    "name": "Noodles",
+                    "name": "Pasta",
                     "amount": 200,
                     "unit": "g"
                 },
